@@ -6,6 +6,7 @@ import torch.nn.functional as F
 import torch.backends.cudnn as cudnn
 from basic_code import load, util, networks
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+logger = util.Logger('./log/','fan_rav')
 def main():
     parser = argparse.ArgumentParser(description='PyTorch Frame Attention Network Training')
     parser.add_argument('--at_type', '--attention', default=1, type=int, metavar='N',
@@ -39,7 +40,7 @@ def main():
     ''' Train & Eval '''
     if args.evaluate == True:
         logger.print('args.evaluate: {:}', args.evaluate)        
-        val(val_loader, model, logger)
+        val(val_loader, model, at_type)
         return
     logger.print('frame attention network (fan) ck+ dataset, learning rate: {:}'.format(args.lr))
 

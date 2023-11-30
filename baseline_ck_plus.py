@@ -7,6 +7,7 @@ import torch.nn.functional as F
 import torch.backends.cudnn as cudnn
 import torchvision.models as models
 from basic_code import load, util, networks
+logger = util.Logger('./log/','fan_rav')
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 def main():
     parser = argparse.ArgumentParser(description='PyTorch Frame Attention Network Training')
