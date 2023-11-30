@@ -35,7 +35,6 @@ def main(path_to_data, path_to_test_data, train_ratio):
             src = os.path.join(path_to_original, files[j])
             shutil.move(src, dst)
 
-
 def parse_args():
   parser = argparse.ArgumentParser(description="Dataset divider")
   parser.add_argument("--data_path", required=True,
