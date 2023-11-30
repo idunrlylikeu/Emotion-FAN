@@ -9,7 +9,6 @@
 *.cfg
 !.gitignore
 pretrain_model/
-pretrain_model/
 *.mp4
 log/
 model/
