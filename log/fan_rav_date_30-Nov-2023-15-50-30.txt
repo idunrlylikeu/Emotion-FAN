@@ -23,3 +23,18 @@ Epoch: [  3][200/320]	Loss 0.0046 (0.0035)	Acc@1 100.000 (100.000)
  *Acc@Video 58.000 
 epoch: 4 learning rate:0.004
 Epoch: [  4][  0/320]	Loss 0.0054 (0.0054)	Acc@1 100.000 (100.000)	
+Epoch: [  4][200/320]	Loss 0.0016 (0.0026)	Acc@1 100.000 (99.990)	
+ *Acc@Video 100.000   *Acc@Frame 99.993 
+ *Acc@Video 52.000 
+epoch: 5 learning rate:0.004
+Epoch: [  5][  0/320]	Loss 0.0016 (0.0016)	Acc@1 100.000 (100.000)	
+Epoch: [  5][200/320]	Loss 0.0025 (0.0020)	Acc@1 100.000 (99.990)	
+ *Acc@Video 100.000   *Acc@Frame 99.993 
+ *Acc@Video 56.000 
+epoch: 6 learning rate:0.004
+Epoch: [  6][  0/320]	Loss 0.0006 (0.0006)	Acc@1 100.000 (100.000)	
+Epoch: [  6][200/320]	Loss 0.0012 (0.0014)	Acc@1 100.000 (99.990)	
+ *Acc@Video 100.000   *Acc@Frame 99.993 
+ *Acc@Video 52.000 
+epoch: 7 learning rate:0.004
+Epoch: [  7][  0/320]	Loss 0.0011 (0.0011)	Acc@1 100.000 (100.000)	
