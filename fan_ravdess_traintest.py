@@ -5,7 +5,6 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.backends.cudnn as cudnn
 from basic_code import load, util, networks
-logger = util.Logger('./log/','fan_rav')
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 def main():
     parser = argparse.ArgumentParser(description='PyTorch Frame Attention Network Training')
@@ -40,9 +39,15 @@ def main():
     lr_scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=60, gamma=0.2)
     cudnn.benchmark = True
     ''' Train & Eval '''
+    if args.evaluate == True:
+        logger.print('args.evaluate: {:}'.format(args.evaluate))        
+        val(val_loader, model, at_type)
+        return
+    logger.print('frame attention network (fan) rav dataset, learning rate: {:}'.format(args.lr))
+
     for epoch in range(args.epochs):
-        train(train_loader, model, optimizer, epoch)
-        acc_epoch = val(val_loader, model, at_type)
+        train(train_loader, model, optimizer, epoch, logger)
+        acc_epoch = val(val_loader, model, at_type, logger)
         is_best = acc_epoch > best_acc
         if is_best:
             logger.print('better model!')
@@ -55,13 +60,10 @@ def main():
             
         lr_scheduler.step()
         logger.print("epoch: {:} learning rate:{:}".format(epoch+1, optimizer.param_groups[0]['lr']))
-    if args.evaluate == True:
-        logger.print('args.evaluate: {:}'.format(args.evaluate))        
-        val(val_loader, model, at_type)
-        return
-    logger.print('frame attention network (fan) rav dataset, learning rate: {:}'.format(args.lr))
+    
+    
         
-def train(train_loader, model, optimizer, epoch):
+def train(train_loader, model, optimizer, epoch, logger):
     losses = util.AverageMeter()
     topframe = util.AverageMeter()
     topVideo = util.AverageMeter()
@@ -116,7 +118,7 @@ def train(train_loader, model, optimizer, epoch):
     topVideo.update(acc_video[0], i + 1)
     logger.print(' *Acc@Video {topVideo.avg:.3f}   *Acc@Frame {topframe.avg:.3f} '.format(topVideo=topVideo, topframe=topframe))
 
-def val(val_loader, model, at_type):
+def val(val_loader, model, at_type, logger):
     topVideo = util.AverageMeter()
     # switch to evaluate mode
     model.eval()

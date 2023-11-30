@@ -1,0 +1,4 @@
+30-Nov-2023-15-50-30 --- args ---
+The attention method is self_relation-attention, learning rate: 0.004
+frame attention network (fan) rav dataset, learning rate: 0.004
+Epoch: [  0][  0/320]	Loss 2.0628 (2.0628)	Acc@1 10.417 (10.417)	

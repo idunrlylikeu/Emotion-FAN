@@ -118,6 +118,32 @@ def afew_faces_fan(root_train, list_train, batchsize_train, root_eval, list_eval
 
 
     return train_loader, val_loader
+def rav_faces_baseline(root_train, list_train, batchsize_train, root_eval, list_eval, batchsize_eval):
+
+    train_dataset = data_generator.VideoDataset(
+        video_root=root_train,
+        video_list=list_train,
+        rectify_label=cate2label['RAVDESS'],
+        transform=transforms.Compose([transforms.Resize(224), transforms.RandomHorizontalFlip(), transforms.ToTensor()]),
+    )
+
+    val_dataset = data_generator.VideoDataset(
+        video_root=root_eval,
+        video_list=list_eval,
+        rectify_label=cate2label['RAVDESS'],
+        transform=transforms.Compose([transforms.Resize(224), transforms.ToTensor()]),
+        csv=False)
+
+    train_loader = torch.utils.data.DataLoader(
+        train_dataset,
+        batch_size=batchsize_train, shuffle=True,
+        num_workers=8, pin_memory=True)
+
+    val_loader = torch.utils.data.DataLoader(
+        val_dataset,
+        batch_size=batchsize_eval, shuffle=False,
+        num_workers=8, pin_memory=True)
+    return train_loader, val_loader
 
 def rav_faces_fan(root_train, list_train, batchsize_train, root_eval, list_eval, batchsize_eval):
 
