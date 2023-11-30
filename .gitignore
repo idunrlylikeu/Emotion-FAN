@@ -8,6 +8,9 @@
 *.pyc
 *.cfg
 !.gitignore
-pretrain_model/Resnet18_FER+_pytorch.pth.tar
-pretrain_model/Resnet18_MS1M_pytorch.pth.tar
+pretrain_model/
+pretrain_model/
 *.mp4
+log/
+model/
+

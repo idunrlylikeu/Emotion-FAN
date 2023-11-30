@@ -2,3 +2,24 @@
 The attention method is self_relation-attention, learning rate: 0.004
 frame attention network (fan) rav dataset, learning rate: 0.004
 Epoch: [  0][  0/320]	Loss 2.0628 (2.0628)	Acc@1 10.417 (10.417)	
+Epoch: [  0][200/320]	Loss 0.0555 (0.3629)	Acc@1 100.000 (88.858)	
+ *Acc@Video 100.000   *Acc@Frame 92.839 
+ *Acc@Video 58.000 
+better model!
+epoch: 1 learning rate:0.004
+Epoch: [  1][  0/320]	Loss 0.0177 (0.0177)	Acc@1 100.000 (100.000)	
+Epoch: [  1][200/320]	Loss 0.0179 (0.0173)	Acc@1 100.000 (99.668)	
+ *Acc@Video 100.000   *Acc@Frame 99.772 
+ *Acc@Video 58.000 
+epoch: 2 learning rate:0.004
+Epoch: [  2][  0/320]	Loss 0.0084 (0.0084)	Acc@1 100.000 (100.000)	
+Epoch: [  2][200/320]	Loss 0.0038 (0.0078)	Acc@1 100.000 (99.917)	
+ *Acc@Video 100.000   *Acc@Frame 99.948 
+ *Acc@Video 54.000 
+epoch: 3 learning rate:0.004
+Epoch: [  3][  0/320]	Loss 0.0021 (0.0021)	Acc@1 100.000 (100.000)	
+Epoch: [  3][200/320]	Loss 0.0046 (0.0035)	Acc@1 100.000 (100.000)	
+ *Acc@Video 100.000   *Acc@Frame 99.993 
+ *Acc@Video 58.000 
+epoch: 4 learning rate:0.004
+Epoch: [  4][  0/320]	Loss 0.0054 (0.0054)	Acc@1 100.000 (100.000)	
