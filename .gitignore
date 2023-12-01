@@ -13,3 +13,5 @@ pretrain_model/
 log/
 model/
 
+*.txt
+log/fan_rav_date_30-Nov-2023-15-50-30.txt
