@@ -12,7 +12,7 @@ def main():
                         help= '0 is self-attention; 1 is self + relation-attention')
     parser.add_argument('--epochs', default=180, type=int, metavar='N',
                         help='number of total epochs to run')
-    parser.add_argument('--lr', '--learning-rate', default=4e-3, type=float,
+    parser.add_argument('--lr', '--learning-rate', default=1e-4, type=float,
                         metavar='LR', help='initial learning rate')
     parser.add_argument('-e', '--evaluate', default=False, dest='evaluate', action='store_true',
                         help='evaluate model on validation set')
