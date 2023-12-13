@@ -127,6 +127,9 @@ def val(val_loader, model, at_type, logger):
     target_store = []
     index_vector = []
     with torch.no_grad():
+        num_classes = 8
+        class_metrics = {i: {'tp': 0, 'total': 0} for i in range(num_classes)}
+        # class_metrics = {i: {'tp': 0, 'fp': 0, 'fn': 0} for i in range(num_classes)}
         for i, (input_var, target, index) in enumerate(val_loader):
             # compute output
             target = target.to(DEVICE)
@@ -158,6 +161,41 @@ def val(val_loader, model, at_type, logger):
             pred_score = model(vm=weightmean_sourcefc, phrase='eval', AT_level='pred')
         if at_type == 'self_relation-attention':
             pred_score  = model(vectors=output_store_fc, vm=weightmean_sourcefc, alphas_from1=output_alpha, index_matrix=index_matrix, phrase='eval', AT_level='second_level')
+        pred = pred_score.argmax(dim=1)
+        # print("pred",pred)
+        # print("====")
+        # test, pred1 = pred_score.topk(1, 1, True, True) 
+        # print("test",test)
+        # print("====")
+        # print("pred1",pred1)
+        # print("====")
+        # print("target",target_vector)
+        for i in range(num_classes):
+            class_metrics[i]['tp'] += ((pred == i) & (target_vector == i)).sum().item()
+            class_metrics[i]['total'] += (target_vector == i).sum().item()
+
+        # Compute the accuracy for each class
+        for i in range(num_classes):
+            tp = class_metrics[i]['tp']
+            total = class_metrics[i]['total']
+            accuracy = tp / total if total > 0 else 0
+            print(f'Class {i}: Accuracy: {accuracy:.3f}')
+        # Update the class metrics
+        # pred = pred_score.argmax(dim=1)
+        # for i in range(num_classes):
+        #     class_metrics[i]['tp'] += ((pred == i) & (target_vector == i)).sum().item()
+        #     class_metrics[i]['fp'] += ((pred == i) & (target_vector != i)).sum().item()
+        #     class_metrics[i]['fn'] += ((pred != i) & (target_vector == i)).sum().item()
+
+        # # Compute the precision, recall, and F1 score for each class
+        # for i in range(num_classes):
+        #     tp = class_metrics[i]['tp']
+        #     fp = class_metrics[i]['fp']
+        #     fn = class_metrics[i]['fn']
+        #     precision = tp / (tp + fp) if tp + fp > 0 else 0
+        #     recall = tp / (tp + fn) if tp + fn > 0 else 0
+        #     f1 = 2 * precision * recall / (precision + recall) if precision + recall > 0 else 0
+        #     print(f'Class {i}: Precision: {precision:.3f}, Recall: {recall:.3f}, F1: {f1:.3f}')
         acc_video = util.accuracy(pred_score.cpu(), target_vector.cpu(), topk=(1,))
         topVideo.update(acc_video[0], i + 1)
         logger.print(' *Acc@Video {topVideo.avg:.3f} '.format(topVideo=topVideo))

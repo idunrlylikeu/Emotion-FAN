@@ -18,7 +18,7 @@ def main():
     parser.add_argument('--resnet50_path', type=str, default='./model/resnet50_ft_weight.pkl', help='pretrained_backbone_path')
     args = parser.parse_args()
     best_acc = 0
-    logger = util.Logger('./log/','baseline_rav')
+    logger = util.Logger('./log/','baseline_rav_resnet50')
     
     ''' Load data '''
     root_train = './data/face/train_ravdess'

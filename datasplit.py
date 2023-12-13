@@ -29,6 +29,10 @@ def main(path_to_data, path_to_test_data, train_ratio):
         if not os.path.exists(path_to_save):
             os.makedirs(path_to_save)
         files = get_files_from_folder(path_to_original)
+
+        # shuffles files to ensure random distribution
+        np.random.shuffle(files)
+
         # moves data
         for j in range(int(test_counter[i])):
             dst = os.path.join(path_to_save, files[j])
