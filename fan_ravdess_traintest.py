@@ -162,6 +162,8 @@ def val(val_loader, model, at_type, logger):
         if at_type == 'self_relation-attention':
             pred_score  = model(vectors=output_store_fc, vm=weightmean_sourcefc, alphas_from1=output_alpha, index_matrix=index_matrix, phrase='eval', AT_level='second_level')
         pred = pred_score.argmax(dim=1)
+
+
         # print("pred",pred)
         # print("====")
         # test, pred1 = pred_score.topk(1, 1, True, True) 
@@ -196,6 +198,8 @@ def val(val_loader, model, at_type, logger):
         #     recall = tp / (tp + fn) if tp + fn > 0 else 0
         #     f1 = 2 * precision * recall / (precision + recall) if precision + recall > 0 else 0
         #     print(f'Class {i}: Precision: {precision:.3f}, Recall: {recall:.3f}, F1: {f1:.3f}')
+            
+            
         acc_video = util.accuracy(pred_score.cpu(), target_vector.cpu(), topk=(1,))
         topVideo.update(acc_video[0], i + 1)
         logger.print(' *Acc@Video {topVideo.avg:.3f} '.format(topVideo=topVideo))
