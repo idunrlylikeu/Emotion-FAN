@@ -1,0 +1,11 @@
+# It's a example script to run custom commands in virtural environment of WSL.
+bash -c -i "pip list | grep torch || pip install torch"
+bash -c -i "pip list | grep numpy || pip install numpy"
+bash -c -i "pip list | grep pandas || pip install pandas"
+bash -c -i "pip list | grep opencv-python || pip install opencv-python"
+bash -c -i "pip list | grep matplotlib || pip install matplotlib"
+bash -c -i "pip list | grep seaborn || pip install seaborn"
+bash -c -i "pip list | grep tensorboard || pip install tensorboard"
+bash -c -i "pip list | grep scikit-learn || pip install scikit-learn"
+bash -c -i "pip list | grep dlib || pip install dlib"
+bash -c -i "pip list | grep torchvision || pip install torchvision"
