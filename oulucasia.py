@@ -5,32 +5,33 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.backends.cudnn as cudnn
 from basic_code import load, util, networks
-logger = util.Logger('./log/','fan_afew')
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+losses_per_epoch = []
 def main():
     parser = argparse.ArgumentParser(description='PyTorch Frame Attention Network Training')
     parser.add_argument('--at_type', '--attention', default=1, type=int, metavar='N',
                         help= '0 is self-attention; 1 is self + relation-attention')
     parser.add_argument('--epochs', default=180, type=int, metavar='N',
                         help='number of total epochs to run')
-    parser.add_argument('--lr', '--learning-rate', default=4e-3, type=float,
+    parser.add_argument('--lr', '--learning-rate', default=1e-4, type=float,
                         metavar='LR', help='initial learning rate')
     parser.add_argument('-e', '--evaluate', default=False, dest='evaluate', action='store_true',
                         help='evaluate model on validation set')
     args = parser.parse_args()
     best_acc = 0
+    
     at_type = ['self-attention', 'self_relation-attention'][args.at_type]
-    logger = util.Logger('./log/','fan_afew')
+    logger = util.Logger('./log/','fan_oulu')
     logger.print('The attention method is {:}, learning rate: {:}'.format(at_type, args.lr))
     
     ''' Load data '''
-    root_train = './data/face/train_afew'
-    list_train = './data/txt/afew_train.txt'
+    root_train = './data/face/train_oulu'
+    list_train = './data/txt/train_oulu.txt'
     batchsize_train= 48
-    root_eval = './data/face/val_afew'
-    list_eval = './data/txt/afew_eval.txt'
+    root_eval = './data/face/test_oulu'
+    list_eval = './data/txt/test_oulu.txt'
     batchsize_eval= 64
-    train_loader, val_loader = load.afew_faces_fan(root_train, list_train, batchsize_train, root_eval, list_eval, batchsize_eval)
+    train_loader, val_loader = load.oulu_faces_fan(root_train, list_train, batchsize_train, root_eval, list_eval, batchsize_eval)
     ''' Load model '''
     _structure = networks.resnet18_at(at_type=at_type)
     _parameterDir = './pretrain_model/Resnet18_FER+_pytorch.pth.tar'
@@ -41,14 +42,14 @@ def main():
     cudnn.benchmark = True
     ''' Train & Eval '''
     if args.evaluate == True:
-        logger.print('args.evaluate: {:}', args.evaluate)        
+        logger.print('args.evaluate: {:}'.format(args.evaluate))        
         val(val_loader, model, at_type)
         return
-    logger.print('frame attention network (fan) afew dataset, learning rate: {:}'.format(args.lr))
-    
+    logger.print('frame attention network (fan) oulu dataset, learning rate: {:}'.format(args.lr))
+
     for epoch in range(args.epochs):
-        train(train_loader, model, optimizer, epoch)
-        acc_epoch = val(val_loader, model, at_type)
+        train(train_loader, model, optimizer, epoch, logger)
+        acc_epoch = val(val_loader, model, at_type, logger)
         is_best = acc_epoch > best_acc
         if is_best:
             logger.print('better model!')
@@ -61,8 +62,11 @@ def main():
             
         lr_scheduler.step()
         logger.print("epoch: {:} learning rate:{:}".format(epoch+1, optimizer.param_groups[0]['lr']))
+        torch.cuda.empty_cache()
+    
+    
         
-def train(train_loader, model, optimizer, epoch):
+def train(train_loader, model, optimizer, epoch, logger):
     losses = util.AverageMeter()
     topframe = util.AverageMeter()
     topVideo = util.AverageMeter()
@@ -71,7 +75,7 @@ def train(train_loader, model, optimizer, epoch):
     output_store_fc = []
     target_store = []
     index_vector = []
-
+    
     model.train()
     for i, (input_first, input_second, input_third, target_first, index) in enumerate(train_loader):
         target_var = target_first.to(DEVICE)
@@ -100,6 +104,8 @@ def train(train_loader, model, optimizer, epoch):
                   'Acc@1 {topframe.val:.3f} ({topframe.avg:.3f})\t'
                 .format(
                 epoch, i, len(train_loader), loss=losses, topframe=topframe))
+        torch.cuda.empty_cache()
+    losses_per_epoch.append(losses.avg)
 
     index_vector = torch.cat(index_vector, dim=0)  # [256] ... [256]  --->  [21570]
     index_matrix = []
@@ -117,7 +123,7 @@ def train(train_loader, model, optimizer, epoch):
     topVideo.update(acc_video[0], i + 1)
     logger.print(' *Acc@Video {topVideo.avg:.3f}   *Acc@Frame {topframe.avg:.3f} '.format(topVideo=topVideo, topframe=topframe))
 
-def val(val_loader, model, at_type):
+def val(val_loader, model, at_type, logger):
     topVideo = util.AverageMeter()
     # switch to evaluate mode
     model.eval()
@@ -126,6 +132,9 @@ def val(val_loader, model, at_type):
     target_store = []
     index_vector = []
     with torch.no_grad():
+        num_classes = 8
+        class_metrics = {i: {'tp': 0, 'total': 0} for i in range(num_classes)}
+        class_metrics2 = {i: {'tp': 0, 'fp': 0, 'fn': 0} for i in range(num_classes)}
         for i, (input_var, target, index) in enumerate(val_loader):
             # compute output
             target = target.to(DEVICE)
@@ -157,6 +166,33 @@ def val(val_loader, model, at_type):
             pred_score = model(vm=weightmean_sourcefc, phrase='eval', AT_level='pred')
         if at_type == 'self_relation-attention':
             pred_score  = model(vectors=output_store_fc, vm=weightmean_sourcefc, alphas_from1=output_alpha, index_matrix=index_matrix, phrase='eval', AT_level='second_level')
+        pred = pred_score.argmax(dim=1)
+
+
+        # Compute the accuracy for each class
+        for i in range(num_classes):
+            tp = class_metrics[i]['tp']
+            total = class_metrics[i]['total']
+            accuracy_c = tp / total if total > 0 else 0
+            logger.print(f'Class {i}: Accuracy: {accuracy_c:.3f}')
+        # Update the class metrics
+        pred = pred_score.argmax(dim=1)
+        for i in range(num_classes):
+            class_metrics2[i]['tp'] += ((pred == i) & (target_vector == i)).sum().item()
+            class_metrics2[i]['fp'] += ((pred == i) & (target_vector != i)).sum().item()
+            class_metrics2[i]['fn'] += ((pred != i) & (target_vector == i)).sum().item()
+
+        # Compute the precision, recall, and F1 score for each class
+        for i in range(num_classes):
+            tp = class_metrics2[i]['tp']
+            fp = class_metrics2[i]['fp']
+            fn = class_metrics2[i]['fn']
+            precision = tp / (tp + fp) if tp + fp > 0 else 0
+            recall = tp / (tp + fn) if tp + fn > 0 else 0
+            f1 = 2 * precision * recall / (precision + recall) if precision + recall > 0 else 0
+            logger.print(f'Class {i}: Precision: {precision:.3f}, Recall: {recall:.3f}, F1: {f1:.3f}')
+            
+            
         acc_video = util.accuracy(pred_score.cpu(), target_vector.cpu(), topk=(1,))
         topVideo.update(acc_video[0], i + 1)
         logger.print(' *Acc@Video {topVideo.avg:.3f} '.format(topVideo=topVideo))

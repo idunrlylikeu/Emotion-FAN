@@ -6,7 +6,6 @@ import torch.nn.functional as F
 import torch.backends.cudnn as cudnn
 from basic_code import load, util, networks
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-logger = util.Logger('./log/','fan_rav')
 def main():
     parser = argparse.ArgumentParser(description='PyTorch Frame Attention Network Training')
     parser.add_argument('--at_type', '--attention', default=1, type=int, metavar='N',
@@ -45,8 +44,8 @@ def main():
     logger.print('frame attention network (fan) ck+ dataset, learning rate: {:}'.format(args.lr))
 
     for epoch in range(args.epochs):
-        train(train_loader, model, optimizer, epoch)
-        acc_epoch = val(val_loader, model, at_type)
+        train(train_loader, model, optimizer, epoch, logger)
+        acc_epoch = val(val_loader, model, at_type, logger)
         is_best = acc_epoch > best_acc
         if is_best:
             logger.print('better model!')
@@ -60,7 +59,7 @@ def main():
         lr_scheduler.step()
         logger.print("epoch: {:} learning rate:{:}".format(epoch+1, optimizer.param_groups[0]['lr']))
         
-def train(train_loader, model, optimizer, epoch):
+def train(train_loader, model, optimizer, epoch, logger):
     losses = util.AverageMeter()
     topframe = util.AverageMeter()
     topVideo = util.AverageMeter()
@@ -118,7 +117,7 @@ def train(train_loader, model, optimizer, epoch):
     logger.print(' *Acc@Video {topVideo.avg:.3f}   *Acc@Frame {topframe.avg:.3f} '.format(topVideo=topVideo, topframe=topframe))
 
 
-def val(val_loader, model, at_type):
+def val(val_loader, model, at_type, logger):
     topVideo = util.AverageMeter()
 
     # switch to evaluate mode

@@ -12,7 +12,10 @@ cate2label = {'CK+':{0: 'Happy', 1: 'Angry', 2: 'Disgust', 3: 'Fear', 4: 'Sad', 
                   'Angry': 1,'Disgust': 2,'Fear': 3,'Happy': 0,'Neutral': 5,'Sad': 4,'Surprise': 6},
 
               'RAVDESS':{0: 'neutral',1: 'calm',2: 'happy',3: 'sad',4: 'angry',5: 'fearful',6: 'disgust',7: 'surprised',
-                  'neutral': 0,'calm': 1,'happy': 2,'sad': 3,'angry': 4,'fearful': 5,'disgust': 6,'surprised': 7}}
+                  'neutral': 0,'calm': 1,'happy': 2,'sad': 3,'angry': 4,'fearful': 5,'disgust': 6,'surprised': 7},
+
+              'OULU':{0: 'Angry', 1: 'Disgust', 2: 'Fear', 3: 'Happy', 4: 'Sadness', 5: 'Surprise',
+                      'Angry': 0, 'Disgust': 1, 'Fear': 2, 'Happy': 3,'Sadness': 4,'Surprise': 5}}
 
 def ckplus_faces_baseline(video_root, video_list, fold, batchsize_train, batchsize_eval):
     train_dataset = data_generator.TenFold_VideoDataset(
@@ -172,6 +175,32 @@ def rav_faces_fan(root_train, list_train, batchsize_train, root_eval, list_eval,
         num_workers=8, pin_memory=True)
 
 
+    return train_loader, val_loader
+def oulu_faces_fan(root_train, list_train, batchsize_train, root_eval, list_eval, batchsize_eval):
+
+    train_dataset = data_generator.TripleImageDataset(
+        video_root=root_train,
+        video_list=list_train,
+        rectify_label=cate2label['OULU'],
+        transform=transforms.Compose([transforms.Resize(224), transforms.RandomHorizontalFlip(), transforms.ToTensor()]),
+    )
+
+    val_dataset = data_generator.VideoDataset(
+        video_root=root_eval,
+        video_list=list_eval,
+        rectify_label=cate2label['OULU'],
+        transform=transforms.Compose([transforms.Resize(224), transforms.ToTensor()]),
+        csv=False)
+
+    train_loader = torch.utils.data.DataLoader(
+        train_dataset,
+        batch_size=batchsize_train, shuffle=True,
+        num_workers=8, pin_memory=True, drop_last=True)
+
+    val_loader = torch.utils.data.DataLoader(
+        val_dataset,
+        batch_size=batchsize_eval, shuffle=False,
+        num_workers=8, pin_memory=True)
     return train_loader, val_loader
 
 def model_parameters(_structure, _parameterDir):
