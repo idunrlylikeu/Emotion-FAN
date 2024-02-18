@@ -116,8 +116,8 @@ class ResNet_AT(nn.Module):
         self.beta = nn.Sequential(nn.Linear(1024, 1),
                                   nn.Sigmoid())
         # num class
-        self.pred_fc1 = nn.Linear(512, 6)
-        self.pred_fc2 = nn.Linear(1024, 6)
+        self.pred_fc1 = nn.Linear(512, 7)
+        self.pred_fc2 = nn.Linear(1024, 7)
         # num class
         self.at_type = at_type
 

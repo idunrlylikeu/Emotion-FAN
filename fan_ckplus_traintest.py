@@ -10,7 +10,7 @@ def main():
     parser = argparse.ArgumentParser(description='PyTorch Frame Attention Network Training')
     parser.add_argument('--at_type', '--attention', default=1, type=int, metavar='N',
                         help= '0 is self-attention; 1 is self + relation-attention')
-    parser.add_argument('--epochs', default=60, type=int, metavar='N',
+    parser.add_argument('--epochs', default=180, type=int, metavar='N',
                         help='number of total epochs to run')
     parser.add_argument('-f', '--fold', default=10, type=int, help='which fold used for ck+ test')
     parser.add_argument('--lr', '--learning-rate', default=1e-2, type=float,
