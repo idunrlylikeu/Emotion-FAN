@@ -5,6 +5,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.backends.cudnn as cudnn
 from basic_code import load, util, networks
+from collections import Counter
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 def main():
     parser = argparse.ArgumentParser(description='PyTorch Frame Attention Network Training')
@@ -15,7 +16,7 @@ def main():
     parser.add_argument('-f', '--fold', default=1, type=int, help='which fold used for ck+ test')
     parser.add_argument('--lr', '--learning-rate', default=1e-1, type=float,
                         metavar='LR', help='initial learning rate')
-    parser.add_argument('-e', '--evaluate', default=False, dest='evaluate', action='store_true',
+    parser.add_argument('-e', '--evaluate', default=True, dest='evaluate', action='store_true',
                         help='evaluate model on validation set')
     args = parser.parse_args()
     best_acc = 0
@@ -23,6 +24,13 @@ def main():
     logger = util.Logger('./log/','fan_ckplus')
     logger.print('The attention method is {:}, learning rate: {:}'.format(at_type, args.lr))
     ''' Load data '''
+    # root_train = './data/face/ck_face'
+    # list_train = './data/txt/all_ck+.txt'
+    # batchsize_train= 48
+    # root_eval = './data/face/all_oulu'
+    # list_eval = './data/txt/all_oulu.txt'
+    # batchsize_eval= 64
+    # train_loader, val_loader = load.oulu_faces_fan_ck(root_train, list_train, batchsize_train, root_eval, list_eval, batchsize_eval)
     video_root = './data/face/ck_face'
     video_list = './data/txt/CK+_10-fold_sample_IDascendorder_step10.txt'
     batchsize_train= 48
@@ -30,8 +38,17 @@ def main():
     train_loader, val_loader = load.ckplus_faces_fan(video_root, video_list, args.fold, batchsize_train, batchsize_eval)
     ''' Load model '''
     _structure = networks.resnet18_at(at_type=at_type)
-    _parameterDir = './pretrain_model/Resnet18_FER+_pytorch.pth.tar'
+    _parameterDir = './model/ckplustold1self_relation-attention_40_96.9697'
     model = load.model_parameters(_structure, _parameterDir)
+    # model_paths = ['./model/ckplusfold10self_relation-attention_24_95.4545', './model/ckplusfold9self_relation-attention_6_100.0',
+    #                 './model/ckplusfold8self_relation-attention_10_100.0', './model/ckplusfold7self_relation-attention_54_96.5517',
+    #                 './model/ckplusfold6self_relation-attention_8_97.2973', './model/ckplusfold5self_relation-attention_3_100.0',
+    #                 './model/ckplusfold4self_relation-attention_4_97.1429', './model/ckplusfold3self_relation-attention_3_97.5',
+    #                 './model/ckplusfold2self_relation-attention_3_97.4359', './model/ckplustold1self_relation-attention_40_96.9697']
+    # models = []
+    # for model_path in model_paths:
+    #     model = load.model_parameters(_structure, model_path)
+    #     models.append(model)
     ''' Loss & Optimizer '''
     optimizer = torch.optim.SGD(filter(lambda p: p.requires_grad, model.parameters()), args.lr, momentum=0.9, weight_decay=1e-4)
     lr_scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=30, gamma=0.2)
@@ -39,7 +56,7 @@ def main():
     ''' Train & Eval '''
     if args.evaluate == True:
         logger.print('args.evaluate: {:}', args.evaluate)        
-        val(val_loader, model, at_type)
+        val(val_loader, model, at_type, logger)
         return
     logger.print('frame attention network (fan) ck+ dataset, learning rate: {:}'.format(args.lr))
 
@@ -119,7 +136,6 @@ def train(train_loader, model, optimizer, epoch, logger):
 
 def val(val_loader, model, at_type, logger):
     topVideo = util.AverageMeter()
-
     # switch to evaluate mode
     model.eval()
     output_store_fc = []
@@ -131,6 +147,7 @@ def val(val_loader, model, at_type, logger):
             # compute output
             target = target.to(DEVICE)
             input_var = input_var.to(DEVICE)
+
             ''' model & full_model'''
             f, alphas = model(input_var, phrase = 'eval')
 
@@ -138,7 +155,8 @@ def val(val_loader, model, at_type, logger):
             output_alpha.append(alphas)
             target_store.append(target)
             index_vector.append(index)
-
+            torch.cuda.empty_cache()
+        torch.cuda.empty_cache()
         index_vector = torch.cat(index_vector, dim=0)  # [256] ... [256]  --->  [21570]
         index_matrix = []
         for i in range(int(max(index_vector)) + 1):
@@ -158,8 +176,12 @@ def val(val_loader, model, at_type, logger):
             pred_score = model(vm=weightmean_sourcefc, phrase='eval', AT_level='pred')
         if at_type == 'self_relation-attention':
             pred_score  = model(vectors=output_store_fc, vm=weightmean_sourcefc, alphas_from1=output_alpha, index_matrix=index_matrix, phrase='eval', AT_level='second_level')
+        
+
 
         acc_video = util.accuracy(pred_score.cpu(), target_vector.cpu(), topk=(1,))
+        for label, pred in zip(target_vector, torch.argmax(pred_score, dim=1)):
+            logger.print(f'Label: {label.item()}, Pred: {pred.item()}')
         topVideo.update(acc_video[0], i + 1)
         logger.print(' *Acc@Video {topVideo.avg:.3f} '.format(topVideo=topVideo))
 

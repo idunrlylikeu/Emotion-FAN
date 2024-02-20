@@ -118,7 +118,6 @@ def load_imgs_total_frame(video_root, video_list, rectify_label):
         for id, line in enumerate(imf):
 
             video_label = line.strip().split()
-
             video_name = video_label[0]  # name of video
             label = rectify_label[video_label[1]]  # label of video
 
