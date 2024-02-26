@@ -1,0 +1,181 @@
+24-Feb-2024-17-13-29 --- args ---
+Epoch:   0
+train loss : 0.4477 (0.0946)
+val loss :9.9662 (9.9662)
+Epoch:   1
+train loss : 0.0746 (0.0006)
+val loss :20.5399 (20.5399)
+Epoch:   2
+train loss : 0.0346 (0.0022)
+val loss :31.4665 (31.4665)
+Epoch:   3
+train loss : 0.0186 (0.0095)
+val loss :22.7698 (22.7698)
+Epoch:   4
+train loss : 0.0093 (0.0001)
+val loss :11.0732 (11.0732)
+Epoch:   5
+train loss : 0.0109 (0.0010)
+val loss :338.2336 (338.2336)
+Epoch:   6
+train loss : 0.0165 (0.0008)
+val loss :118.6270 (118.6270)
+Epoch:   7
+train loss : 0.0060 (0.0006)
+val loss :168.0162 (168.0162)
+Epoch:   8
+train loss : 0.0027 (0.0004)
+val loss :6.2787 (6.2787)
+Epoch:   9
+train loss : 0.0004 (0.0000)
+val loss :5.2049 (5.2049)
+Epoch:  10
+train loss : 0.0003 (0.0008)
+val loss :2.9516 (2.9516)
+Epoch:  11
+train loss : 0.0007 (0.0002)
+val loss :4.3799 (4.3799)
+Epoch:  12
+train loss : 0.0002 (0.0002)
+val loss :6.1556 (6.1556)
+Epoch:  13
+train loss : 0.0003 (0.0001)
+val loss :2.7181 (2.7181)
+Epoch:  14
+train loss : 0.0002 (0.0002)
+val loss :3.3091 (3.3091)
+Epoch:  15
+train loss : 0.0005 (0.0012)
+val loss :10.0865 (10.0865)
+Epoch:  16
+train loss : 0.0008 (0.0011)
+val loss :3.5113 (3.5113)
+Epoch:  17
+train loss : 0.0118 (0.0097)
+val loss :20.3563 (20.3563)
+Epoch:  18
+train loss : 0.0077 (0.0003)
+val loss :16.1838 (16.1838)
+Epoch:  19
+train loss : 0.0004 (0.0002)
+val loss :11.2871 (11.2871)
+Epoch:  20
+train loss : 0.0003 (0.0000)
+val loss :7.7544 (7.7544)
+Epoch:  21
+train loss : 0.0002 (0.0003)
+val loss :12.1245 (12.1245)
+Epoch:  22
+train loss : 0.0002 (0.0002)
+val loss :1.7373 (1.7373)
+Epoch:  23
+train loss : 0.0002 (0.0000)
+val loss :2.4995 (2.4995)
+Epoch:  24
+train loss : 0.0002 (0.0052)
+val loss :2.2053 (2.2053)
+Epoch:  25
+train loss : 0.0012 (0.0043)
+val loss :11.8690 (11.8690)
+Epoch:  26
+train loss : 0.0313 (0.0129)
+val loss :2.2839 (2.2839)
+Epoch:  27
+train loss : 0.0173 (0.0001)
+val loss :8.1625 (8.1625)
+Epoch:  28
+train loss : 0.0103 (0.0608)
+val loss :6.0653 (6.0653)
+Epoch:  29
+train loss : 0.0022 (0.0005)
+val loss :2.7053 (2.7053)
+Epoch:  30
+train loss : 0.0004 (0.0003)
+val loss :2.6552 (2.6552)
+Epoch:  31
+train loss : 0.0003 (0.0001)
+val loss :9.4657 (9.4657)
+Epoch:  32
+train loss : 0.0002 (0.0002)
+val loss :4.1303 (4.1303)
+Epoch:  33
+train loss : 0.0003 (0.0008)
+val loss :4.5838 (4.5838)
+Epoch:  34
+train loss : 0.0004 (0.0004)
+val loss :2.4316 (2.4316)
+Epoch:  35
+train loss : 0.0003 (0.0002)
+val loss :3.5786 (3.5786)
+Epoch:  36
+train loss : 0.0004 (0.0000)
+val loss :2.7021 (2.7021)
+Epoch:  37
+train loss : 0.0002 (0.0002)
+val loss :2.4073 (2.4073)
+Epoch:  38
+train loss : 0.0003 (0.0012)
+val loss :2.2692 (2.2692)
+Epoch:  39
+train loss : 0.0002 (0.0002)
+val loss :1.9830 (1.9830)
+Epoch:  40
+train loss : 0.0002 (0.0002)
+val loss :2.3521 (2.3521)
+Epoch:  41
+train loss : 0.0003 (0.0001)
+val loss :3.2766 (3.2766)
+Epoch:  42
+train loss : 0.0002 (0.0006)
+val loss :8.4818 (8.4818)
+Epoch:  43
+train loss : 0.0002 (0.0000)
+val loss :1.9349 (1.9349)
+Epoch:  44
+train loss : 0.0002 (0.0002)
+val loss :3.7077 (3.7077)
+Epoch:  45
+train loss : 0.0002 (0.0003)
+val loss :3.0615 (3.0615)
+Epoch:  46
+train loss : 0.0003 (0.0011)
+val loss :2.9985 (2.9985)
+Epoch:  47
+train loss : 0.0002 (0.0001)
+val loss :2.4988 (2.4988)
+Epoch:  48
+train loss : 0.0001 (0.0008)
+val loss :3.7838 (3.7838)
+Epoch:  49
+train loss : 0.0002 (0.0005)
+val loss :1.8850 (1.8850)
+Epoch:  50
+train loss : 0.0002 (0.0001)
+val loss :2.7949 (2.7949)
+Epoch:  51
+train loss : 0.0002 (0.0010)
+val loss :2.1333 (2.1333)
+Epoch:  52
+train loss : 0.0002 (0.0003)
+val loss :3.8230 (3.8230)
+Epoch:  53
+train loss : 0.0001 (0.0001)
+val loss :3.0957 (3.0957)
+Epoch:  54
+train loss : 0.0002 (0.0027)
+val loss :1.7661 (1.7661)
+Epoch:  55
+train loss : 0.0001 (0.0000)
+val loss :1.6182 (1.6182)
+Epoch:  56
+train loss : 0.0002 (0.0000)
+val loss :2.3383 (2.3383)
+Epoch:  57
+train loss : 0.0001 (0.0000)
+val loss :1.3890 (1.3890)
+Epoch:  58
+train loss : 0.0001 (0.0010)
+val loss :3.3835 (3.3835)
+Epoch:  59
+train loss : 0.0003 (0.0001)
+val loss :1.7737 (1.7737)

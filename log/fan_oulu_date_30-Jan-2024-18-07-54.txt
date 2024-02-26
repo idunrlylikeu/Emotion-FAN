@@ -1,0 +1,1154 @@
+30-Jan-2024-18-07-54 --- args ---
+The attention method is self_relation-attention, learning rate: 0.0001
+frame attention network (fan) oulu dataset, learning rate: 0.0001
+Epoch: [  0][  0/923]	Loss 1.7973 (1.7973)	Acc@1 14.583 (14.583)	
+Epoch: [  0][200/923]	Loss 1.6722 (1.7264)	Acc@1 27.083 (26.586)	
+Epoch: [  0][400/923]	Loss 1.5234 (1.6568)	Acc@1 43.750 (32.933)	
+Epoch: [  0][600/923]	Loss 1.4270 (1.5973)	Acc@1 50.000 (37.743)	
+Epoch: [  0][800/923]	Loss 1.3090 (1.5422)	Acc@1 56.250 (41.378)	
+ *Acc@Video 52.877   *Acc@Frame 43.317 
+Class 0: Precision: 0.642, Recall: 0.472, F1: 0.544
+Class 1: Precision: 0.494, Recall: 0.597, F1: 0.541
+Class 2: Precision: 0.545, Recall: 0.417, F1: 0.472
+Class 3: Precision: 0.636, Recall: 0.972, F1: 0.769
+Class 4: Precision: 0.655, Recall: 0.528, F1: 0.585
+Class 5: Precision: 0.710, Recall: 0.681, F1: 0.695
+
+ *Acc@Video 61.111 
+better model!
+epoch: 1 learning rate:0.0001
+Epoch: [  1][  0/923]	Loss 1.3146 (1.3146)	Acc@1 58.333 (58.333)	
+Epoch: [  1][200/923]	Loss 1.2128 (1.2360)	Acc@1 58.333 (57.058)	
+Epoch: [  1][400/923]	Loss 1.0939 (1.1970)	Acc@1 70.833 (58.910)	
+Epoch: [  1][600/923]	Loss 1.0294 (1.1615)	Acc@1 62.500 (60.455)	
+Epoch: [  1][800/923]	Loss 0.8769 (1.1297)	Acc@1 79.167 (61.465)	
+ *Acc@Video 65.774   *Acc@Frame 62.116 
+Class 0: Precision: 0.609, Recall: 0.583, F1: 0.596
+Class 1: Precision: 0.547, Recall: 0.569, F1: 0.558
+Class 2: Precision: 0.543, Recall: 0.528, F1: 0.535
+Class 3: Precision: 0.780, Recall: 0.889, F1: 0.831
+Class 4: Precision: 0.710, Recall: 0.611, F1: 0.657
+Class 5: Precision: 0.784, Recall: 0.806, F1: 0.795
+
+ *Acc@Video 66.435 
+better model!
+epoch: 2 learning rate:0.0001
+Epoch: [  2][  0/923]	Loss 0.9034 (0.9034)	Acc@1 70.833 (70.833)	
+Epoch: [  2][200/923]	Loss 0.8972 (0.9420)	Acc@1 64.583 (68.263)	
+Epoch: [  2][400/923]	Loss 0.9132 (0.9193)	Acc@1 66.667 (68.901)	
+Epoch: [  2][600/923]	Loss 0.6775 (0.8984)	Acc@1 79.167 (69.797)	
+Epoch: [  2][800/923]	Loss 0.8092 (0.8783)	Acc@1 75.000 (70.412)	
+ *Acc@Video 72.421   *Acc@Frame 70.770 
+Class 0: Precision: 0.600, Recall: 0.750, F1: 0.667
+Class 1: Precision: 0.707, Recall: 0.569, F1: 0.631
+Class 2: Precision: 0.613, Recall: 0.639, F1: 0.626
+Class 3: Precision: 0.795, Recall: 0.917, F1: 0.852
+Class 4: Precision: 0.778, Recall: 0.583, F1: 0.667
+Class 5: Precision: 0.847, Recall: 0.847, F1: 0.847
+
+ *Acc@Video 71.759 
+better model!
+epoch: 3 learning rate:0.0001
+Epoch: [  3][  0/923]	Loss 0.6602 (0.6602)	Acc@1 75.000 (75.000)	
+Epoch: [  3][200/923]	Loss 0.6416 (0.7515)	Acc@1 77.083 (75.145)	
+Epoch: [  3][400/923]	Loss 0.7622 (0.7353)	Acc@1 81.250 (75.888)	
+Epoch: [  3][600/923]	Loss 0.7700 (0.7202)	Acc@1 75.000 (76.265)	
+Epoch: [  3][800/923]	Loss 0.7390 (0.7052)	Acc@1 70.833 (76.805)	
+ *Acc@Video 78.175   *Acc@Frame 77.056 
+Class 0: Precision: 0.679, Recall: 0.764, F1: 0.719
+Class 1: Precision: 0.776, Recall: 0.625, F1: 0.692
+Class 2: Precision: 0.614, Recall: 0.708, F1: 0.658
+Class 3: Precision: 0.797, Recall: 0.875, F1: 0.834
+Class 4: Precision: 0.788, Recall: 0.722, F1: 0.754
+Class 5: Precision: 0.877, Recall: 0.792, F1: 0.832
+
+ *Acc@Video 74.769 
+better model!
+epoch: 4 learning rate:0.0001
+Epoch: [  4][  0/923]	Loss 0.5971 (0.5971)	Acc@1 79.167 (79.167)	
+Epoch: [  4][200/923]	Loss 0.6668 (0.6172)	Acc@1 77.083 (80.162)	
+Epoch: [  4][400/923]	Loss 0.5002 (0.5996)	Acc@1 83.333 (80.720)	
+Epoch: [  4][600/923]	Loss 0.5494 (0.5886)	Acc@1 83.333 (81.267)	
+Epoch: [  4][800/923]	Loss 0.5684 (0.5740)	Acc@1 83.333 (81.840)	
+ *Acc@Video 83.036   *Acc@Frame 81.918 
+Class 0: Precision: 0.682, Recall: 0.833, F1: 0.750
+Class 1: Precision: 0.818, Recall: 0.625, F1: 0.709
+Class 2: Precision: 0.667, Recall: 0.750, F1: 0.706
+Class 3: Precision: 0.833, Recall: 0.903, F1: 0.867
+Class 4: Precision: 0.852, Recall: 0.722, F1: 0.782
+Class 5: Precision: 0.870, Recall: 0.833, F1: 0.851
+
+ *Acc@Video 77.778 
+better model!
+epoch: 5 learning rate:0.0001
+Epoch: [  5][  0/923]	Loss 0.5081 (0.5081)	Acc@1 81.250 (81.250)	
+Epoch: [  5][200/923]	Loss 0.4949 (0.4981)	Acc@1 81.250 (84.287)	
+Epoch: [  5][400/923]	Loss 0.5441 (0.4932)	Acc@1 83.333 (84.487)	
+Epoch: [  5][600/923]	Loss 0.3491 (0.4859)	Acc@1 93.750 (84.755)	
+Epoch: [  5][800/923]	Loss 0.4751 (0.4753)	Acc@1 87.500 (85.157)	
+ *Acc@Video 86.111   *Acc@Frame 85.509 
+Class 0: Precision: 0.663, Recall: 0.792, F1: 0.722
+Class 1: Precision: 0.742, Recall: 0.681, F1: 0.710
+Class 2: Precision: 0.718, Recall: 0.778, F1: 0.747
+Class 3: Precision: 0.824, Recall: 0.972, F1: 0.892
+Class 4: Precision: 0.887, Recall: 0.653, F1: 0.752
+Class 5: Precision: 0.922, Recall: 0.819, F1: 0.868
+
+ *Acc@Video 78.241 
+better model!
+epoch: 6 learning rate:0.0001
+Epoch: [  6][  0/923]	Loss 0.4554 (0.4554)	Acc@1 83.333 (83.333)	
+Epoch: [  6][200/923]	Loss 0.2902 (0.4161)	Acc@1 93.750 (86.816)	
+Epoch: [  6][400/923]	Loss 0.5410 (0.4093)	Acc@1 79.167 (87.417)	
+Epoch: [  6][600/923]	Loss 0.3501 (0.4011)	Acc@1 87.500 (87.722)	
+Epoch: [  6][800/923]	Loss 0.3706 (0.3929)	Acc@1 89.583 (88.057)	
+ *Acc@Video 88.294   *Acc@Frame 88.227 
+Class 0: Precision: 0.687, Recall: 0.792, F1: 0.735
+Class 1: Precision: 0.753, Recall: 0.764, F1: 0.759
+Class 2: Precision: 0.786, Recall: 0.764, F1: 0.775
+Class 3: Precision: 0.917, Recall: 0.917, F1: 0.917
+Class 4: Precision: 0.897, Recall: 0.722, F1: 0.800
+Class 5: Precision: 0.895, Recall: 0.944, F1: 0.919
+
+ *Acc@Video 81.713 
+better model!
+epoch: 7 learning rate:0.0001
+Epoch: [  7][  0/923]	Loss 0.3494 (0.3494)	Acc@1 89.583 (89.583)	
+Epoch: [  7][200/923]	Loss 0.3945 (0.3408)	Acc@1 83.333 (90.164)	
+Epoch: [  7][400/923]	Loss 0.2912 (0.3364)	Acc@1 91.667 (90.009)	
+Epoch: [  7][600/923]	Loss 0.4176 (0.3292)	Acc@1 83.333 (90.318)	
+Epoch: [  7][800/923]	Loss 0.4751 (0.3241)	Acc@1 83.333 (90.494)	
+ *Acc@Video 90.774   *Acc@Frame 90.588 
+Class 0: Precision: 0.708, Recall: 0.875, F1: 0.783
+Class 1: Precision: 0.797, Recall: 0.764, F1: 0.780
+Class 2: Precision: 0.792, Recall: 0.792, F1: 0.792
+Class 3: Precision: 0.917, Recall: 0.917, F1: 0.917
+Class 4: Precision: 0.927, Recall: 0.708, F1: 0.803
+Class 5: Precision: 0.893, Recall: 0.931, F1: 0.912
+
+ *Acc@Video 83.102 
+better model!
+epoch: 8 learning rate:0.0001
+Epoch: [  8][  0/923]	Loss 0.4909 (0.4909)	Acc@1 79.167 (79.167)	
+Epoch: [  8][200/923]	Loss 0.3006 (0.2874)	Acc@1 89.583 (91.822)	
+Epoch: [  8][400/923]	Loss 0.2457 (0.2810)	Acc@1 95.833 (91.989)	
+Epoch: [  8][600/923]	Loss 0.2302 (0.2773)	Acc@1 91.667 (92.045)	
+Epoch: [  8][800/923]	Loss 0.2331 (0.2712)	Acc@1 91.667 (92.273)	
+ *Acc@Video 93.155   *Acc@Frame 92.375 
+Class 0: Precision: 0.713, Recall: 0.861, F1: 0.780
+Class 1: Precision: 0.767, Recall: 0.778, F1: 0.772
+Class 2: Precision: 0.792, Recall: 0.792, F1: 0.792
+Class 3: Precision: 0.919, Recall: 0.944, F1: 0.932
+Class 4: Precision: 0.927, Recall: 0.708, F1: 0.803
+Class 5: Precision: 0.915, Recall: 0.903, F1: 0.909
+
+ *Acc@Video 83.102 
+epoch: 9 learning rate:0.0001
+Epoch: [  9][  0/923]	Loss 0.2133 (0.2133)	Acc@1 95.833 (95.833)	
+Epoch: [  9][200/923]	Loss 0.1778 (0.2418)	Acc@1 95.833 (93.470)	
+Epoch: [  9][400/923]	Loss 0.1530 (0.2370)	Acc@1 97.917 (93.537)	
+Epoch: [  9][600/923]	Loss 0.1983 (0.2324)	Acc@1 93.750 (93.660)	
+Epoch: [  9][800/923]	Loss 0.2230 (0.2285)	Acc@1 95.833 (93.721)	
+ *Acc@Video 93.750   *Acc@Frame 93.750 
+Class 0: Precision: 0.747, Recall: 0.861, F1: 0.800
+Class 1: Precision: 0.803, Recall: 0.792, F1: 0.797
+Class 2: Precision: 0.721, Recall: 0.861, F1: 0.785
+Class 3: Precision: 0.915, Recall: 0.903, F1: 0.909
+Class 4: Precision: 0.930, Recall: 0.736, F1: 0.822
+Class 5: Precision: 0.953, Recall: 0.847, F1: 0.897
+
+ *Acc@Video 83.333 
+better model!
+epoch: 10 learning rate:0.0001
+Epoch: [ 10][  0/923]	Loss 0.1044 (0.1044)	Acc@1 97.917 (97.917)	
+Epoch: [ 10][200/923]	Loss 0.2110 (0.2045)	Acc@1 95.833 (94.123)	
+Epoch: [ 10][400/923]	Loss 0.2165 (0.2010)	Acc@1 91.667 (94.249)	
+Epoch: [ 10][600/923]	Loss 0.1489 (0.1984)	Acc@1 93.750 (94.419)	
+Epoch: [ 10][800/923]	Loss 0.1693 (0.1941)	Acc@1 95.833 (94.681)	
+ *Acc@Video 95.536   *Acc@Frame 94.745 
+Class 0: Precision: 0.738, Recall: 0.861, F1: 0.795
+Class 1: Precision: 0.781, Recall: 0.792, F1: 0.786
+Class 2: Precision: 0.811, Recall: 0.833, F1: 0.822
+Class 3: Precision: 0.919, Recall: 0.944, F1: 0.932
+Class 4: Precision: 0.962, Recall: 0.708, F1: 0.816
+Class 5: Precision: 0.905, Recall: 0.931, F1: 0.918
+
+ *Acc@Video 84.491 
+better model!
+epoch: 11 learning rate:0.0001
+Epoch: [ 11][  0/923]	Loss 0.1671 (0.1671)	Acc@1 95.833 (95.833)	
+Epoch: [ 11][200/923]	Loss 0.1990 (0.1742)	Acc@1 93.750 (95.367)	
+Epoch: [ 11][400/923]	Loss 0.1229 (0.1699)	Acc@1 95.833 (95.605)	
+Epoch: [ 11][600/923]	Loss 0.1344 (0.1683)	Acc@1 100.000 (95.601)	
+Epoch: [ 11][800/923]	Loss 0.1003 (0.1658)	Acc@1 100.000 (95.690)	
+ *Acc@Video 96.726   *Acc@Frame 95.729 
+Class 0: Precision: 0.747, Recall: 0.861, F1: 0.800
+Class 1: Precision: 0.792, Recall: 0.792, F1: 0.792
+Class 2: Precision: 0.792, Recall: 0.847, F1: 0.819
+Class 3: Precision: 0.917, Recall: 0.917, F1: 0.917
+Class 4: Precision: 0.963, Recall: 0.722, F1: 0.825
+Class 5: Precision: 0.905, Recall: 0.931, F1: 0.918
+
+ *Acc@Video 84.491 
+epoch: 12 learning rate:0.0001
+Epoch: [ 12][  0/923]	Loss 0.1153 (0.1153)	Acc@1 97.917 (97.917)	
+Epoch: [ 12][200/923]	Loss 0.1107 (0.1547)	Acc@1 97.917 (96.041)	
+Epoch: [ 12][400/923]	Loss 0.1524 (0.1486)	Acc@1 95.833 (96.228)	
+Epoch: [ 12][600/923]	Loss 0.0796 (0.1463)	Acc@1 100.000 (96.364)	
+Epoch: [ 12][800/923]	Loss 0.1380 (0.1438)	Acc@1 93.750 (96.426)	
+ *Acc@Video 97.321   *Acc@Frame 96.431 
+Class 0: Precision: 0.759, Recall: 0.875, F1: 0.813
+Class 1: Precision: 0.784, Recall: 0.806, F1: 0.795
+Class 2: Precision: 0.884, Recall: 0.847, F1: 0.865
+Class 3: Precision: 0.909, Recall: 0.972, F1: 0.940
+Class 4: Precision: 0.962, Recall: 0.708, F1: 0.816
+Class 5: Precision: 0.908, Recall: 0.958, F1: 0.932
+
+ *Acc@Video 86.111 
+better model!
+epoch: 13 learning rate:0.0001
+Epoch: [ 13][  0/923]	Loss 0.1603 (0.1603)	Acc@1 95.833 (95.833)	
+Epoch: [ 13][200/923]	Loss 0.1697 (0.1329)	Acc@1 91.667 (96.766)	
+Epoch: [ 13][400/923]	Loss 0.1625 (0.1310)	Acc@1 95.833 (96.810)	
+Epoch: [ 13][600/923]	Loss 0.1428 (0.1292)	Acc@1 97.917 (96.828)	
+Epoch: [ 13][800/923]	Loss 0.1527 (0.1274)	Acc@1 93.750 (96.889)	
+ *Acc@Video 98.016   *Acc@Frame 96.933 
+Class 0: Precision: 0.744, Recall: 0.889, F1: 0.810
+Class 1: Precision: 0.918, Recall: 0.778, F1: 0.842
+Class 2: Precision: 0.753, Recall: 0.889, F1: 0.815
+Class 3: Precision: 0.904, Recall: 0.917, F1: 0.910
+Class 4: Precision: 0.966, Recall: 0.792, F1: 0.870
+Class 5: Precision: 0.956, Recall: 0.903, F1: 0.929
+
+ *Acc@Video 86.111 
+epoch: 14 learning rate:0.0001
+Epoch: [ 14][  0/923]	Loss 0.1165 (0.1165)	Acc@1 95.833 (95.833)	
+Epoch: [ 14][200/923]	Loss 0.1663 (0.1128)	Acc@1 91.667 (97.367)	
+Epoch: [ 14][400/923]	Loss 0.0856 (0.1114)	Acc@1 95.833 (97.418)	
+Epoch: [ 14][600/923]	Loss 0.0715 (0.1113)	Acc@1 97.917 (97.390)	
+Epoch: [ 14][800/923]	Loss 0.1148 (0.1104)	Acc@1 95.833 (97.391)	
+ *Acc@Video 98.413   *Acc@Frame 97.395 
+Class 0: Precision: 0.775, Recall: 0.861, F1: 0.816
+Class 1: Precision: 0.813, Recall: 0.847, F1: 0.830
+Class 2: Precision: 0.816, Recall: 0.861, F1: 0.838
+Class 3: Precision: 0.930, Recall: 0.917, F1: 0.923
+Class 4: Precision: 0.966, Recall: 0.778, F1: 0.862
+Class 5: Precision: 0.931, Recall: 0.931, F1: 0.931
+
+ *Acc@Video 86.574 
+better model!
+epoch: 15 learning rate:0.0001
+Epoch: [ 15][  0/923]	Loss 0.0712 (0.0712)	Acc@1 100.000 (100.000)	
+Epoch: [ 15][200/923]	Loss 0.0683 (0.1004)	Acc@1 100.000 (97.896)	
+Epoch: [ 15][400/923]	Loss 0.0510 (0.1024)	Acc@1 100.000 (97.647)	
+Epoch: [ 15][600/923]	Loss 0.0920 (0.1012)	Acc@1 100.000 (97.660)	
+Epoch: [ 15][800/923]	Loss 0.2158 (0.0982)	Acc@1 93.750 (97.701)	
+ *Acc@Video 99.107   *Acc@Frame 97.716 
+Class 0: Precision: 0.756, Recall: 0.903, F1: 0.823
+Class 1: Precision: 0.843, Recall: 0.819, F1: 0.831
+Class 2: Precision: 0.870, Recall: 0.833, F1: 0.851
+Class 3: Precision: 0.932, Recall: 0.944, F1: 0.938
+Class 4: Precision: 0.965, Recall: 0.764, F1: 0.853
+Class 5: Precision: 0.896, Recall: 0.958, F1: 0.926
+
+ *Acc@Video 87.037 
+better model!
+epoch: 16 learning rate:0.0001
+Epoch: [ 16][  0/923]	Loss 0.0698 (0.0698)	Acc@1 97.917 (97.917)	
+Epoch: [ 16][200/923]	Loss 0.1124 (0.0919)	Acc@1 95.833 (97.720)	
+Epoch: [ 16][400/923]	Loss 0.0362 (0.0892)	Acc@1 100.000 (97.870)	
+Epoch: [ 16][600/923]	Loss 0.0715 (0.0859)	Acc@1 97.917 (98.055)	
+Epoch: [ 16][800/923]	Loss 0.1244 (0.0842)	Acc@1 93.750 (98.143)	
+ *Acc@Video 99.107   *Acc@Frame 98.099 
+Class 0: Precision: 0.778, Recall: 0.875, F1: 0.824
+Class 1: Precision: 0.836, Recall: 0.847, F1: 0.841
+Class 2: Precision: 0.829, Recall: 0.875, F1: 0.851
+Class 3: Precision: 0.930, Recall: 0.917, F1: 0.923
+Class 4: Precision: 0.966, Recall: 0.778, F1: 0.862
+Class 5: Precision: 0.945, Recall: 0.958, F1: 0.952
+
+ *Acc@Video 87.500 
+better model!
+epoch: 17 learning rate:0.0001
+Epoch: [ 17][  0/923]	Loss 0.0433 (0.0433)	Acc@1 100.000 (100.000)	
+Epoch: [ 17][200/923]	Loss 0.0423 (0.0776)	Acc@1 97.917 (98.228)	
+Epoch: [ 17][400/923]	Loss 0.1078 (0.0781)	Acc@1 95.833 (98.260)	
+Epoch: [ 17][600/923]	Loss 0.0284 (0.0772)	Acc@1 100.000 (98.277)	
+Epoch: [ 17][800/923]	Loss 0.0489 (0.0761)	Acc@1 100.000 (98.317)	
+ *Acc@Video 99.603   *Acc@Frame 98.336 
+Class 0: Precision: 0.756, Recall: 0.903, F1: 0.823
+Class 1: Precision: 0.864, Recall: 0.792, F1: 0.826
+Class 2: Precision: 0.843, Recall: 0.819, F1: 0.831
+Class 3: Precision: 0.905, Recall: 0.931, F1: 0.918
+Class 4: Precision: 0.964, Recall: 0.750, F1: 0.844
+Class 5: Precision: 0.875, Recall: 0.972, F1: 0.921
+
+ *Acc@Video 86.111 
+epoch: 18 learning rate:0.0001
+Epoch: [ 18][  0/923]	Loss 0.0690 (0.0690)	Acc@1 97.917 (97.917)	
+Epoch: [ 18][200/923]	Loss 0.0588 (0.0734)	Acc@1 97.917 (98.445)	
+Epoch: [ 18][400/923]	Loss 0.0607 (0.0716)	Acc@1 97.917 (98.478)	
+Epoch: [ 18][600/923]	Loss 0.0392 (0.0695)	Acc@1 100.000 (98.516)	
+Epoch: [ 18][800/923]	Loss 0.0879 (0.0685)	Acc@1 97.917 (98.541)	
+ *Acc@Video 99.405   *Acc@Frame 98.488 
+Class 0: Precision: 0.800, Recall: 0.889, F1: 0.842
+Class 1: Precision: 0.873, Recall: 0.861, F1: 0.867
+Class 2: Precision: 0.800, Recall: 0.889, F1: 0.842
+Class 3: Precision: 0.930, Recall: 0.917, F1: 0.923
+Class 4: Precision: 0.967, Recall: 0.819, F1: 0.887
+Class 5: Precision: 0.957, Recall: 0.917, F1: 0.936
+
+ *Acc@Video 88.194 
+better model!
+epoch: 19 learning rate:0.0001
+Epoch: [ 19][  0/923]	Loss 0.0356 (0.0356)	Acc@1 100.000 (100.000)	
+Epoch: [ 19][200/923]	Loss 0.0561 (0.0642)	Acc@1 100.000 (98.684)	
+Epoch: [ 19][400/923]	Loss 0.0754 (0.0648)	Acc@1 100.000 (98.582)	
+Epoch: [ 19][600/923]	Loss 0.1019 (0.0630)	Acc@1 95.833 (98.672)	
+Epoch: [ 19][800/923]	Loss 0.0580 (0.0623)	Acc@1 100.000 (98.713)	
+ *Acc@Video 99.802   *Acc@Frame 98.718 
+Class 0: Precision: 0.759, Recall: 0.917, F1: 0.830
+Class 1: Precision: 0.868, Recall: 0.819, F1: 0.843
+Class 2: Precision: 0.838, Recall: 0.861, F1: 0.849
+Class 3: Precision: 0.929, Recall: 0.903, F1: 0.915
+Class 4: Precision: 0.966, Recall: 0.778, F1: 0.862
+Class 5: Precision: 0.933, Recall: 0.972, F1: 0.952
+
+ *Acc@Video 87.500 
+epoch: 20 learning rate:0.0001
+Epoch: [ 20][  0/923]	Loss 0.0527 (0.0527)	Acc@1 97.917 (97.917)	
+Epoch: [ 20][200/923]	Loss 0.1006 (0.0546)	Acc@1 97.917 (98.860)	
+Epoch: [ 20][400/923]	Loss 0.0610 (0.0558)	Acc@1 97.917 (98.847)	
+Epoch: [ 20][600/923]	Loss 0.0364 (0.0565)	Acc@1 100.000 (98.832)	
+Epoch: [ 20][800/923]	Loss 0.0620 (0.0562)	Acc@1 100.000 (98.861)	
+ *Acc@Video 99.901   *Acc@Frame 98.862 
+Class 0: Precision: 0.802, Recall: 0.903, F1: 0.850
+Class 1: Precision: 0.861, Recall: 0.861, F1: 0.861
+Class 2: Precision: 0.812, Recall: 0.903, F1: 0.855
+Class 3: Precision: 0.930, Recall: 0.917, F1: 0.923
+Class 4: Precision: 0.967, Recall: 0.806, F1: 0.879
+Class 5: Precision: 0.971, Recall: 0.917, F1: 0.943
+
+ *Acc@Video 88.426 
+better model!
+epoch: 21 learning rate:0.0001
+Epoch: [ 21][  0/923]	Loss 0.0947 (0.0947)	Acc@1 97.917 (97.917)	
+Epoch: [ 21][200/923]	Loss 0.0321 (0.0534)	Acc@1 100.000 (98.932)	
+Epoch: [ 21][400/923]	Loss 0.0620 (0.0507)	Acc@1 97.917 (99.039)	
+Epoch: [ 21][600/923]	Loss 0.0337 (0.0509)	Acc@1 100.000 (99.026)	
+Epoch: [ 21][800/923]	Loss 0.0297 (0.0508)	Acc@1 100.000 (99.035)	
+ *Acc@Video 99.802   *Acc@Frame 99.025 
+Class 0: Precision: 0.802, Recall: 0.903, F1: 0.850
+Class 1: Precision: 0.861, Recall: 0.861, F1: 0.861
+Class 2: Precision: 0.861, Recall: 0.861, F1: 0.861
+Class 3: Precision: 0.931, Recall: 0.931, F1: 0.931
+Class 4: Precision: 0.967, Recall: 0.806, F1: 0.879
+Class 5: Precision: 0.933, Recall: 0.972, F1: 0.952
+
+ *Acc@Video 88.889 
+better model!
+epoch: 22 learning rate:0.0001
+Epoch: [ 22][  0/923]	Loss 0.0347 (0.0347)	Acc@1 100.000 (100.000)	
+Epoch: [ 22][200/923]	Loss 0.0259 (0.0484)	Acc@1 100.000 (99.140)	
+Epoch: [ 22][400/923]	Loss 0.0466 (0.0467)	Acc@1 97.917 (99.158)	
+Epoch: [ 22][600/923]	Loss 0.0253 (0.0463)	Acc@1 100.000 (99.144)	
+Epoch: [ 22][800/923]	Loss 0.0745 (0.0464)	Acc@1 95.833 (99.118)	
+ *Acc@Video 100.000   *Acc@Frame 99.145 
+Class 0: Precision: 0.805, Recall: 0.917, F1: 0.857
+Class 1: Precision: 0.851, Recall: 0.875, F1: 0.863
+Class 2: Precision: 0.873, Recall: 0.861, F1: 0.867
+Class 3: Precision: 0.931, Recall: 0.931, F1: 0.931
+Class 4: Precision: 0.982, Recall: 0.778, F1: 0.868
+Class 5: Precision: 0.921, Recall: 0.972, F1: 0.946
+
+ *Acc@Video 88.889 
+epoch: 23 learning rate:0.0001
+Epoch: [ 23][  0/923]	Loss 0.0141 (0.0141)	Acc@1 100.000 (100.000)	
+Epoch: [ 23][200/923]	Loss 0.0371 (0.0434)	Acc@1 100.000 (99.078)	
+Epoch: [ 23][400/923]	Loss 0.0359 (0.0433)	Acc@1 100.000 (99.164)	
+Epoch: [ 23][600/923]	Loss 0.0394 (0.0427)	Acc@1 97.917 (99.230)	
+Epoch: [ 23][800/923]	Loss 0.1082 (0.0422)	Acc@1 95.833 (99.251)	
+ *Acc@Video 99.901   *Acc@Frame 99.248 
+Class 0: Precision: 0.803, Recall: 0.847, F1: 0.824
+Class 1: Precision: 0.847, Recall: 0.847, F1: 0.847
+Class 2: Precision: 0.838, Recall: 0.861, F1: 0.849
+Class 3: Precision: 0.918, Recall: 0.931, F1: 0.924
+Class 4: Precision: 0.952, Recall: 0.819, F1: 0.881
+Class 5: Precision: 0.933, Recall: 0.972, F1: 0.952
+
+ *Acc@Video 87.963 
+epoch: 24 learning rate:0.0001
+Epoch: [ 24][  0/923]	Loss 0.0173 (0.0173)	Acc@1 100.000 (100.000)	
+Epoch: [ 24][200/923]	Loss 0.0247 (0.0386)	Acc@1 100.000 (99.399)	
+Epoch: [ 24][400/923]	Loss 0.0841 (0.0388)	Acc@1 97.917 (99.382)	
+Epoch: [ 24][600/923]	Loss 0.0213 (0.0392)	Acc@1 100.000 (99.376)	
+Epoch: [ 24][800/923]	Loss 0.0456 (0.0385)	Acc@1 97.917 (99.402)	
+ *Acc@Video 100.000   *Acc@Frame 99.397 
+Class 0: Precision: 0.836, Recall: 0.847, F1: 0.841
+Class 1: Precision: 0.873, Recall: 0.861, F1: 0.867
+Class 2: Precision: 0.810, Recall: 0.889, F1: 0.848
+Class 3: Precision: 0.915, Recall: 0.903, F1: 0.909
+Class 4: Precision: 0.939, Recall: 0.861, F1: 0.899
+Class 5: Precision: 0.958, Recall: 0.958, F1: 0.958
+
+ *Acc@Video 88.657 
+epoch: 25 learning rate:0.0001
+Epoch: [ 25][  0/923]	Loss 0.0300 (0.0300)	Acc@1 100.000 (100.000)	
+Epoch: [ 25][200/923]	Loss 0.0212 (0.0340)	Acc@1 100.000 (99.565)	
+Epoch: [ 25][400/923]	Loss 0.0217 (0.0351)	Acc@1 100.000 (99.491)	
+Epoch: [ 25][600/923]	Loss 0.0456 (0.0360)	Acc@1 100.000 (99.449)	
+Epoch: [ 25][800/923]	Loss 0.0379 (0.0368)	Acc@1 100.000 (99.407)	
+ *Acc@Video 100.000   *Acc@Frame 99.393 
+Class 0: Precision: 0.805, Recall: 0.861, F1: 0.832
+Class 1: Precision: 0.884, Recall: 0.847, F1: 0.865
+Class 2: Precision: 0.802, Recall: 0.903, F1: 0.850
+Class 3: Precision: 0.917, Recall: 0.917, F1: 0.917
+Class 4: Precision: 0.952, Recall: 0.819, F1: 0.881
+Class 5: Precision: 0.972, Recall: 0.958, F1: 0.965
+
+ *Acc@Video 88.426 
+epoch: 26 learning rate:0.0001
+Epoch: [ 26][  0/923]	Loss 0.0273 (0.0273)	Acc@1 100.000 (100.000)	
+Epoch: [ 26][200/923]	Loss 0.0205 (0.0340)	Acc@1 100.000 (99.388)	
+Epoch: [ 26][400/923]	Loss 0.0544 (0.0338)	Acc@1 97.917 (99.444)	
+Epoch: [ 26][600/923]	Loss 0.0161 (0.0340)	Acc@1 100.000 (99.432)	
+Epoch: [ 26][800/923]	Loss 0.0124 (0.0337)	Acc@1 100.000 (99.454)	
+ *Acc@Video 99.901   *Acc@Frame 99.458 
+Class 0: Precision: 0.805, Recall: 0.917, F1: 0.857
+Class 1: Precision: 0.849, Recall: 0.861, F1: 0.855
+Class 2: Precision: 0.886, Recall: 0.861, F1: 0.873
+Class 3: Precision: 0.918, Recall: 0.931, F1: 0.924
+Class 4: Precision: 0.982, Recall: 0.764, F1: 0.859
+Class 5: Precision: 0.910, Recall: 0.986, F1: 0.947
+
+ *Acc@Video 88.657 
+epoch: 27 learning rate:0.0001
+Epoch: [ 27][  0/923]	Loss 0.0179 (0.0179)	Acc@1 100.000 (100.000)	
+Epoch: [ 27][200/923]	Loss 0.0158 (0.0318)	Acc@1 100.000 (99.596)	
+Epoch: [ 27][400/923]	Loss 0.0625 (0.0302)	Acc@1 97.917 (99.642)	
+Epoch: [ 27][600/923]	Loss 0.0254 (0.0300)	Acc@1 100.000 (99.612)	
+Epoch: [ 27][800/923]	Loss 0.0248 (0.0299)	Acc@1 100.000 (99.599)	
+ *Acc@Video 100.000   *Acc@Frame 99.591 
+Class 0: Precision: 0.810, Recall: 0.889, F1: 0.848
+Class 1: Precision: 0.831, Recall: 0.889, F1: 0.859
+Class 2: Precision: 0.865, Recall: 0.889, F1: 0.877
+Class 3: Precision: 0.931, Recall: 0.931, F1: 0.931
+Class 4: Precision: 0.982, Recall: 0.778, F1: 0.868
+Class 5: Precision: 0.959, Recall: 0.972, F1: 0.966
+
+ *Acc@Video 89.120 
+better model!
+epoch: 28 learning rate:0.0001
+Epoch: [ 28][  0/923]	Loss 0.0272 (0.0272)	Acc@1 100.000 (100.000)	
+Epoch: [ 28][200/923]	Loss 0.0420 (0.0269)	Acc@1 100.000 (99.637)	
+Epoch: [ 28][400/923]	Loss 0.0302 (0.0279)	Acc@1 100.000 (99.548)	
+Epoch: [ 28][600/923]	Loss 0.0137 (0.0280)	Acc@1 100.000 (99.556)	
+Epoch: [ 28][800/923]	Loss 0.0427 (0.0278)	Acc@1 100.000 (99.573)	
+ *Acc@Video 100.000   *Acc@Frame 99.589 
+Class 0: Precision: 0.810, Recall: 0.889, F1: 0.848
+Class 1: Precision: 0.842, Recall: 0.889, F1: 0.865
+Class 2: Precision: 0.844, Recall: 0.903, F1: 0.872
+Class 3: Precision: 0.943, Recall: 0.917, F1: 0.930
+Class 4: Precision: 0.983, Recall: 0.792, F1: 0.877
+Class 5: Precision: 0.958, Recall: 0.958, F1: 0.958
+
+ *Acc@Video 89.120 
+epoch: 29 learning rate:0.0001
+Epoch: [ 29][  0/923]	Loss 0.0245 (0.0245)	Acc@1 100.000 (100.000)	
+Epoch: [ 29][200/923]	Loss 0.0290 (0.0260)	Acc@1 100.000 (99.627)	
+Epoch: [ 29][400/923]	Loss 0.0146 (0.0272)	Acc@1 100.000 (99.590)	
+Epoch: [ 29][600/923]	Loss 0.0234 (0.0271)	Acc@1 100.000 (99.594)	
+Epoch: [ 29][800/923]	Loss 0.0135 (0.0267)	Acc@1 100.000 (99.618)	
+ *Acc@Video 100.000   *Acc@Frame 99.637 
+Class 0: Precision: 0.815, Recall: 0.917, F1: 0.863
+Class 1: Precision: 0.875, Recall: 0.875, F1: 0.875
+Class 2: Precision: 0.877, Recall: 0.889, F1: 0.883
+Class 3: Precision: 0.943, Recall: 0.917, F1: 0.930
+Class 4: Precision: 0.967, Recall: 0.806, F1: 0.879
+Class 5: Precision: 0.934, Recall: 0.986, F1: 0.959
+
+ *Acc@Video 89.815 
+better model!
+epoch: 30 learning rate:0.0001
+Epoch: [ 30][  0/923]	Loss 0.0128 (0.0128)	Acc@1 100.000 (100.000)	
+Epoch: [ 30][200/923]	Loss 0.0260 (0.0249)	Acc@1 100.000 (99.699)	
+Epoch: [ 30][400/923]	Loss 0.0201 (0.0254)	Acc@1 100.000 (99.631)	
+Epoch: [ 30][600/923]	Loss 0.0222 (0.0245)	Acc@1 100.000 (99.657)	
+Epoch: [ 30][800/923]	Loss 0.0160 (0.0248)	Acc@1 100.000 (99.657)	
+ *Acc@Video 100.000   *Acc@Frame 99.646 
+Class 0: Precision: 0.825, Recall: 0.917, F1: 0.868
+Class 1: Precision: 0.875, Recall: 0.875, F1: 0.875
+Class 2: Precision: 0.833, Recall: 0.903, F1: 0.867
+Class 3: Precision: 0.942, Recall: 0.903, F1: 0.922
+Class 4: Precision: 0.967, Recall: 0.819, F1: 0.887
+Class 5: Precision: 0.958, Recall: 0.958, F1: 0.958
+
+ *Acc@Video 89.583 
+epoch: 31 learning rate:0.0001
+Epoch: [ 31][  0/923]	Loss 0.0266 (0.0266)	Acc@1 100.000 (100.000)	
+Epoch: [ 31][200/923]	Loss 0.0249 (0.0233)	Acc@1 100.000 (99.772)	
+Epoch: [ 31][400/923]	Loss 0.0482 (0.0237)	Acc@1 100.000 (99.735)	
+Epoch: [ 31][600/923]	Loss 0.0199 (0.0234)	Acc@1 100.000 (99.733)	
+Epoch: [ 31][800/923]	Loss 0.0153 (0.0229)	Acc@1 100.000 (99.740)	
+ *Acc@Video 100.000   *Acc@Frame 99.743 
+Class 0: Precision: 0.825, Recall: 0.917, F1: 0.868
+Class 1: Precision: 0.875, Recall: 0.875, F1: 0.875
+Class 2: Precision: 0.890, Recall: 0.903, F1: 0.897
+Class 3: Precision: 0.932, Recall: 0.944, F1: 0.938
+Class 4: Precision: 0.983, Recall: 0.819, F1: 0.894
+Class 5: Precision: 0.959, Recall: 0.986, F1: 0.973
+
+ *Acc@Video 90.741 
+better model!
+epoch: 32 learning rate:0.0001
+Epoch: [ 32][  0/923]	Loss 0.0222 (0.0222)	Acc@1 100.000 (100.000)	
+Epoch: [ 32][200/923]	Loss 0.0168 (0.0218)	Acc@1 100.000 (99.689)	
+Epoch: [ 32][400/923]	Loss 0.0212 (0.0214)	Acc@1 100.000 (99.683)	
+Epoch: [ 32][600/923]	Loss 0.0193 (0.0218)	Acc@1 100.000 (99.646)	
+Epoch: [ 32][800/923]	Loss 0.0190 (0.0218)	Acc@1 100.000 (99.649)	
+ *Acc@Video 100.000   *Acc@Frame 99.664 
+Class 0: Precision: 0.838, Recall: 0.861, F1: 0.849
+Class 1: Precision: 0.925, Recall: 0.861, F1: 0.892
+Class 2: Precision: 0.823, Recall: 0.903, F1: 0.861
+Class 3: Precision: 0.929, Recall: 0.903, F1: 0.915
+Class 4: Precision: 0.942, Recall: 0.903, F1: 0.922
+Class 5: Precision: 0.959, Recall: 0.972, F1: 0.966
+
+ *Acc@Video 90.046 
+epoch: 33 learning rate:0.0001
+Epoch: [ 33][  0/923]	Loss 0.0115 (0.0115)	Acc@1 100.000 (100.000)	
+Epoch: [ 33][200/923]	Loss 0.0091 (0.0208)	Acc@1 100.000 (99.762)	
+Epoch: [ 33][400/923]	Loss 0.0262 (0.0206)	Acc@1 100.000 (99.745)	
+Epoch: [ 33][600/923]	Loss 0.0151 (0.0217)	Acc@1 100.000 (99.716)	
+Epoch: [ 33][800/923]	Loss 0.0116 (0.0213)	Acc@1 100.000 (99.735)	
+ *Acc@Video 100.000   *Acc@Frame 99.738 
+Class 0: Precision: 0.786, Recall: 0.917, F1: 0.846
+Class 1: Precision: 0.938, Recall: 0.833, F1: 0.882
+Class 2: Precision: 0.833, Recall: 0.903, F1: 0.867
+Class 3: Precision: 0.929, Recall: 0.903, F1: 0.915
+Class 4: Precision: 0.969, Recall: 0.861, F1: 0.912
+Class 5: Precision: 0.958, Recall: 0.958, F1: 0.958
+
+ *Acc@Video 89.583 
+epoch: 34 learning rate:0.0001
+Epoch: [ 34][  0/923]	Loss 0.0472 (0.0472)	Acc@1 97.917 (97.917)	
+Epoch: [ 34][200/923]	Loss 0.0068 (0.0189)	Acc@1 100.000 (99.772)	
+Epoch: [ 34][400/923]	Loss 0.0199 (0.0194)	Acc@1 100.000 (99.756)	
+Epoch: [ 34][600/923]	Loss 0.0072 (0.0190)	Acc@1 100.000 (99.757)	
+Epoch: [ 34][800/923]	Loss 0.0088 (0.0196)	Acc@1 100.000 (99.735)	
+ *Acc@Video 100.000   *Acc@Frame 99.747 
+Class 0: Precision: 0.825, Recall: 0.917, F1: 0.868
+Class 1: Precision: 0.886, Recall: 0.861, F1: 0.873
+Class 2: Precision: 0.855, Recall: 0.903, F1: 0.878
+Class 3: Precision: 0.930, Recall: 0.917, F1: 0.923
+Class 4: Precision: 0.968, Recall: 0.833, F1: 0.896
+Class 5: Precision: 0.959, Recall: 0.972, F1: 0.966
+
+ *Acc@Video 90.046 
+epoch: 35 learning rate:0.0001
+Epoch: [ 35][  0/923]	Loss 0.0374 (0.0374)	Acc@1 97.917 (97.917)	
+Epoch: [ 35][200/923]	Loss 0.0081 (0.0185)	Acc@1 100.000 (99.741)	
+Epoch: [ 35][400/923]	Loss 0.0225 (0.0190)	Acc@1 100.000 (99.745)	
+Epoch: [ 35][600/923]	Loss 0.0037 (0.0187)	Acc@1 100.000 (99.761)	
+Epoch: [ 35][800/923]	Loss 0.0106 (0.0183)	Acc@1 100.000 (99.782)	
+ *Acc@Video 100.000   *Acc@Frame 99.758 
+Class 0: Precision: 0.815, Recall: 0.917, F1: 0.863
+Class 1: Precision: 0.851, Recall: 0.875, F1: 0.863
+Class 2: Precision: 0.903, Recall: 0.903, F1: 0.903
+Class 3: Precision: 0.932, Recall: 0.944, F1: 0.938
+Class 4: Precision: 0.982, Recall: 0.778, F1: 0.868
+Class 5: Precision: 0.947, Recall: 0.986, F1: 0.966
+
+ *Acc@Video 90.046 
+epoch: 36 learning rate:0.0001
+Epoch: [ 36][  0/923]	Loss 0.0076 (0.0076)	Acc@1 100.000 (100.000)	
+Epoch: [ 36][200/923]	Loss 0.0124 (0.0181)	Acc@1 100.000 (99.813)	
+Epoch: [ 36][400/923]	Loss 0.0117 (0.0176)	Acc@1 100.000 (99.813)	
+Epoch: [ 36][600/923]	Loss 0.0141 (0.0181)	Acc@1 100.000 (99.757)	
+Epoch: [ 36][800/923]	Loss 0.0089 (0.0182)	Acc@1 100.000 (99.758)	
+ *Acc@Video 100.000   *Acc@Frame 99.763 
+Class 0: Precision: 0.827, Recall: 0.861, F1: 0.844
+Class 1: Precision: 0.844, Recall: 0.903, F1: 0.872
+Class 2: Precision: 0.857, Recall: 0.917, F1: 0.886
+Class 3: Precision: 0.944, Recall: 0.931, F1: 0.937
+Class 4: Precision: 0.952, Recall: 0.819, F1: 0.881
+Class 5: Precision: 0.971, Recall: 0.944, F1: 0.958
+
+ *Acc@Video 89.583 
+epoch: 37 learning rate:0.0001
+Epoch: [ 37][  0/923]	Loss 0.0187 (0.0187)	Acc@1 100.000 (100.000)	
+Epoch: [ 37][200/923]	Loss 0.0064 (0.0161)	Acc@1 100.000 (99.855)	
+Epoch: [ 37][400/923]	Loss 0.0191 (0.0161)	Acc@1 100.000 (99.823)	
+Epoch: [ 37][600/923]	Loss 0.0059 (0.0162)	Acc@1 100.000 (99.820)	
+Epoch: [ 37][800/923]	Loss 0.0069 (0.0164)	Acc@1 100.000 (99.808)	
+ *Acc@Video 100.000   *Acc@Frame 99.810 
+Class 0: Precision: 0.818, Recall: 0.875, F1: 0.846
+Class 1: Precision: 0.853, Recall: 0.889, F1: 0.871
+Class 2: Precision: 0.890, Recall: 0.903, F1: 0.897
+Class 3: Precision: 0.943, Recall: 0.917, F1: 0.930
+Class 4: Precision: 0.952, Recall: 0.819, F1: 0.881
+Class 5: Precision: 0.947, Recall: 0.986, F1: 0.966
+
+ *Acc@Video 89.815 
+epoch: 38 learning rate:0.0001
+Epoch: [ 38][  0/923]	Loss 0.0170 (0.0170)	Acc@1 100.000 (100.000)	
+Epoch: [ 38][200/923]	Loss 0.0068 (0.0163)	Acc@1 100.000 (99.772)	
+Epoch: [ 38][400/923]	Loss 0.0370 (0.0166)	Acc@1 97.917 (99.766)	
+Epoch: [ 38][600/923]	Loss 0.0536 (0.0162)	Acc@1 95.833 (99.775)	
+Epoch: [ 38][800/923]	Loss 0.0572 (0.0160)	Acc@1 100.000 (99.800)	
+ *Acc@Video 100.000   *Acc@Frame 99.815 
+Class 0: Precision: 0.815, Recall: 0.917, F1: 0.863
+Class 1: Precision: 0.865, Recall: 0.889, F1: 0.877
+Class 2: Precision: 0.928, Recall: 0.889, F1: 0.908
+Class 3: Precision: 0.945, Recall: 0.958, F1: 0.952
+Class 4: Precision: 0.983, Recall: 0.806, F1: 0.885
+Class 5: Precision: 0.934, Recall: 0.986, F1: 0.959
+
+ *Acc@Video 90.741 
+epoch: 39 learning rate:0.0001
+Epoch: [ 39][  0/923]	Loss 0.0319 (0.0319)	Acc@1 100.000 (100.000)	
+Epoch: [ 39][200/923]	Loss 0.0145 (0.0153)	Acc@1 100.000 (99.762)	
+Epoch: [ 39][400/923]	Loss 0.0081 (0.0152)	Acc@1 100.000 (99.808)	
+Epoch: [ 39][600/923]	Loss 0.0260 (0.0149)	Acc@1 97.917 (99.841)	
+Epoch: [ 39][800/923]	Loss 0.0090 (0.0151)	Acc@1 100.000 (99.836)	
+ *Acc@Video 100.000   *Acc@Frame 99.833 
+Class 0: Precision: 0.825, Recall: 0.917, F1: 0.868
+Class 1: Precision: 0.886, Recall: 0.861, F1: 0.873
+Class 2: Precision: 0.877, Recall: 0.889, F1: 0.883
+Class 3: Precision: 0.930, Recall: 0.917, F1: 0.923
+Class 4: Precision: 0.968, Recall: 0.833, F1: 0.896
+Class 5: Precision: 0.934, Recall: 0.986, F1: 0.959
+
+ *Acc@Video 90.046 
+epoch: 40 learning rate:0.0001
+Epoch: [ 40][  0/923]	Loss 0.0100 (0.0100)	Acc@1 100.000 (100.000)	
+Epoch: [ 40][200/923]	Loss 0.0335 (0.0135)	Acc@1 100.000 (99.917)	
+Epoch: [ 40][400/923]	Loss 0.0044 (0.0136)	Acc@1 100.000 (99.912)	
+Epoch: [ 40][600/923]	Loss 0.0065 (0.0135)	Acc@1 100.000 (99.903)	
+Epoch: [ 40][800/923]	Loss 0.0082 (0.0134)	Acc@1 100.000 (99.893)	
+ *Acc@Video 100.000   *Acc@Frame 99.889 
+Class 0: Precision: 0.825, Recall: 0.917, F1: 0.868
+Class 1: Precision: 0.926, Recall: 0.875, F1: 0.900
+Class 2: Precision: 0.855, Recall: 0.903, F1: 0.878
+Class 3: Precision: 0.942, Recall: 0.903, F1: 0.922
+Class 4: Precision: 0.969, Recall: 0.875, F1: 0.920
+Class 5: Precision: 0.959, Recall: 0.986, F1: 0.973
+
+ *Acc@Video 90.972 
+better model!
+epoch: 41 learning rate:0.0001
+Epoch: [ 41][  0/923]	Loss 0.0330 (0.0330)	Acc@1 97.917 (97.917)	
+Epoch: [ 41][200/923]	Loss 0.0154 (0.0138)	Acc@1 100.000 (99.865)	
+Epoch: [ 41][400/923]	Loss 0.0121 (0.0134)	Acc@1 100.000 (99.855)	
+Epoch: [ 41][600/923]	Loss 0.0090 (0.0134)	Acc@1 100.000 (99.844)	
+Epoch: [ 41][800/923]	Loss 0.0083 (0.0135)	Acc@1 100.000 (99.847)	
+ *Acc@Video 100.000   *Acc@Frame 99.851 
+Class 0: Precision: 0.815, Recall: 0.917, F1: 0.863
+Class 1: Precision: 0.865, Recall: 0.889, F1: 0.877
+Class 2: Precision: 0.925, Recall: 0.861, F1: 0.892
+Class 3: Precision: 0.945, Recall: 0.958, F1: 0.952
+Class 4: Precision: 0.983, Recall: 0.819, F1: 0.894
+Class 5: Precision: 0.922, Recall: 0.986, F1: 0.953
+
+ *Acc@Video 90.509 
+epoch: 42 learning rate:0.0001
+Epoch: [ 42][  0/923]	Loss 0.0189 (0.0189)	Acc@1 100.000 (100.000)	
+Epoch: [ 42][200/923]	Loss 0.0058 (0.0137)	Acc@1 100.000 (99.824)	
+Epoch: [ 42][400/923]	Loss 0.0280 (0.0134)	Acc@1 97.917 (99.818)	
+Epoch: [ 42][600/923]	Loss 0.0092 (0.0137)	Acc@1 100.000 (99.813)	
+Epoch: [ 42][800/923]	Loss 0.0156 (0.0131)	Acc@1 100.000 (99.836)	
+ *Acc@Video 100.000   *Acc@Frame 99.840 
+Class 0: Precision: 0.831, Recall: 0.889, F1: 0.859
+Class 1: Precision: 0.887, Recall: 0.875, F1: 0.881
+Class 2: Precision: 0.844, Recall: 0.903, F1: 0.872
+Class 3: Precision: 0.929, Recall: 0.903, F1: 0.915
+Class 4: Precision: 0.968, Recall: 0.847, F1: 0.904
+Class 5: Precision: 0.959, Recall: 0.986, F1: 0.973
+
+ *Acc@Video 90.046 
+epoch: 43 learning rate:0.0001
+Epoch: [ 43][  0/923]	Loss 0.0183 (0.0183)	Acc@1 100.000 (100.000)	
+Epoch: [ 43][200/923]	Loss 0.0151 (0.0111)	Acc@1 100.000 (99.927)	
+Epoch: [ 43][400/923]	Loss 0.0100 (0.0121)	Acc@1 100.000 (99.901)	
+Epoch: [ 43][600/923]	Loss 0.0067 (0.0122)	Acc@1 100.000 (99.882)	
+Epoch: [ 43][800/923]	Loss 0.0137 (0.0126)	Acc@1 100.000 (99.867)	
+ *Acc@Video 100.000   *Acc@Frame 99.865 
+Class 0: Precision: 0.815, Recall: 0.917, F1: 0.863
+Class 1: Precision: 0.853, Recall: 0.889, F1: 0.871
+Class 2: Precision: 0.903, Recall: 0.903, F1: 0.903
+Class 3: Precision: 0.945, Recall: 0.958, F1: 0.952
+Class 4: Precision: 0.982, Recall: 0.778, F1: 0.868
+Class 5: Precision: 0.959, Recall: 0.986, F1: 0.973
+
+ *Acc@Video 90.509 
+epoch: 44 learning rate:0.0001
+Epoch: [ 44][  0/923]	Loss 0.0048 (0.0048)	Acc@1 100.000 (100.000)	
+Epoch: [ 44][200/923]	Loss 0.0041 (0.0128)	Acc@1 100.000 (99.845)	
+Epoch: [ 44][400/923]	Loss 0.0058 (0.0127)	Acc@1 100.000 (99.860)	
+Epoch: [ 44][600/923]	Loss 0.0076 (0.0122)	Acc@1 100.000 (99.886)	
+Epoch: [ 44][800/923]	Loss 0.0129 (0.0121)	Acc@1 100.000 (99.891)	
+ *Acc@Video 100.000   *Acc@Frame 99.894 
+Class 0: Precision: 0.821, Recall: 0.889, F1: 0.853
+Class 1: Precision: 0.842, Recall: 0.889, F1: 0.865
+Class 2: Precision: 0.915, Recall: 0.903, F1: 0.909
+Class 3: Precision: 0.945, Recall: 0.958, F1: 0.952
+Class 4: Precision: 0.983, Recall: 0.806, F1: 0.885
+Class 5: Precision: 0.947, Recall: 0.986, F1: 0.966
+
+ *Acc@Video 90.509 
+epoch: 45 learning rate:0.0001
+Epoch: [ 45][  0/923]	Loss 0.0137 (0.0137)	Acc@1 100.000 (100.000)	
+Epoch: [ 45][200/923]	Loss 0.0018 (0.0104)	Acc@1 100.000 (99.907)	
+Epoch: [ 45][400/923]	Loss 0.0108 (0.0110)	Acc@1 100.000 (99.917)	
+Epoch: [ 45][600/923]	Loss 0.0084 (0.0108)	Acc@1 100.000 (99.927)	
+Epoch: [ 45][800/923]	Loss 0.0126 (0.0108)	Acc@1 100.000 (99.925)	
+ *Acc@Video 100.000   *Acc@Frame 99.928 
+Class 0: Precision: 0.815, Recall: 0.917, F1: 0.863
+Class 1: Precision: 0.875, Recall: 0.875, F1: 0.875
+Class 2: Precision: 0.844, Recall: 0.903, F1: 0.872
+Class 3: Precision: 0.929, Recall: 0.903, F1: 0.915
+Class 4: Precision: 0.982, Recall: 0.778, F1: 0.868
+Class 5: Precision: 0.947, Recall: 0.986, F1: 0.966
+
+ *Acc@Video 89.352 
+epoch: 46 learning rate:0.0001
+Epoch: [ 46][  0/923]	Loss 0.0028 (0.0028)	Acc@1 100.000 (100.000)	
+Epoch: [ 46][200/923]	Loss 0.0031 (0.0114)	Acc@1 100.000 (99.876)	
+Epoch: [ 46][400/923]	Loss 0.0049 (0.0114)	Acc@1 100.000 (99.875)	
+Epoch: [ 46][600/923]	Loss 0.0035 (0.0112)	Acc@1 100.000 (99.886)	
+Epoch: [ 46][800/923]	Loss 0.0084 (0.0110)	Acc@1 100.000 (99.880)	
+ *Acc@Video 100.000   *Acc@Frame 99.883 
+Class 0: Precision: 0.823, Recall: 0.903, F1: 0.861
+Class 1: Precision: 0.842, Recall: 0.889, F1: 0.865
+Class 2: Precision: 0.890, Recall: 0.903, F1: 0.897
+Class 3: Precision: 0.943, Recall: 0.917, F1: 0.930
+Class 4: Precision: 0.983, Recall: 0.806, F1: 0.885
+Class 5: Precision: 0.947, Recall: 0.986, F1: 0.966
+
+ *Acc@Video 90.046 
+epoch: 47 learning rate:0.0001
+Epoch: [ 47][  0/923]	Loss 0.0058 (0.0058)	Acc@1 100.000 (100.000)	
+Epoch: [ 47][200/923]	Loss 0.0130 (0.0111)	Acc@1 100.000 (99.876)	
+Epoch: [ 47][400/923]	Loss 0.0515 (0.0116)	Acc@1 97.917 (99.844)	
+Epoch: [ 47][600/923]	Loss 0.0091 (0.0113)	Acc@1 100.000 (99.844)	
+Epoch: [ 47][800/923]	Loss 0.0049 (0.0111)	Acc@1 100.000 (99.852)	
+ *Acc@Video 100.000   *Acc@Frame 99.856 
+Class 0: Precision: 0.825, Recall: 0.917, F1: 0.868
+Class 1: Precision: 0.875, Recall: 0.875, F1: 0.875
+Class 2: Precision: 0.878, Recall: 0.903, F1: 0.890
+Class 3: Precision: 0.930, Recall: 0.917, F1: 0.923
+Class 4: Precision: 0.983, Recall: 0.819, F1: 0.894
+Class 5: Precision: 0.947, Recall: 0.986, F1: 0.966
+
+ *Acc@Video 90.278 
+epoch: 48 learning rate:0.0001
+Epoch: [ 48][  0/923]	Loss 0.0296 (0.0296)	Acc@1 97.917 (97.917)	
+Epoch: [ 48][200/923]	Loss 0.0113 (0.0101)	Acc@1 100.000 (99.927)	
+Epoch: [ 48][400/923]	Loss 0.0076 (0.0099)	Acc@1 100.000 (99.917)	
+Epoch: [ 48][600/923]	Loss 0.0114 (0.0101)	Acc@1 100.000 (99.906)	
+Epoch: [ 48][800/923]	Loss 0.0051 (0.0104)	Acc@1 100.000 (99.880)	
+ *Acc@Video 100.000   *Acc@Frame 99.894 
+Class 0: Precision: 0.835, Recall: 0.917, F1: 0.874
+Class 1: Precision: 0.913, Recall: 0.875, F1: 0.894
+Class 2: Precision: 0.903, Recall: 0.903, F1: 0.903
+Class 3: Precision: 0.931, Recall: 0.931, F1: 0.931
+Class 4: Precision: 0.985, Recall: 0.889, F1: 0.934
+Class 5: Precision: 0.947, Recall: 0.986, F1: 0.966
+
+ *Acc@Video 91.667 
+better model!
+epoch: 49 learning rate:0.0001
+Epoch: [ 49][  0/923]	Loss 0.0043 (0.0043)	Acc@1 100.000 (100.000)	
+Epoch: [ 49][200/923]	Loss 0.0063 (0.0089)	Acc@1 100.000 (99.927)	
+Epoch: [ 49][400/923]	Loss 0.0104 (0.0093)	Acc@1 100.000 (99.922)	
+Epoch: [ 49][600/923]	Loss 0.0035 (0.0093)	Acc@1 100.000 (99.924)	
+Epoch: [ 49][800/923]	Loss 0.0251 (0.0096)	Acc@1 97.917 (99.899)	
+ *Acc@Video 100.000   *Acc@Frame 99.901 
+Class 0: Precision: 0.835, Recall: 0.917, F1: 0.874
+Class 1: Precision: 0.877, Recall: 0.889, F1: 0.883
+Class 2: Precision: 0.855, Recall: 0.903, F1: 0.878
+Class 3: Precision: 0.942, Recall: 0.903, F1: 0.922
+Class 4: Precision: 0.984, Recall: 0.833, F1: 0.902
+Class 5: Precision: 0.959, Recall: 0.986, F1: 0.973
+
+ *Acc@Video 90.509 
+epoch: 50 learning rate:0.0001
+Epoch: [ 50][  0/923]	Loss 0.0083 (0.0083)	Acc@1 100.000 (100.000)	
+Epoch: [ 50][200/923]	Loss 0.0064 (0.0098)	Acc@1 100.000 (99.896)	
+Epoch: [ 50][400/923]	Loss 0.0051 (0.0096)	Acc@1 100.000 (99.896)	
+Epoch: [ 50][600/923]	Loss 0.0145 (0.0098)	Acc@1 100.000 (99.889)	
+Epoch: [ 50][800/923]	Loss 0.0040 (0.0097)	Acc@1 100.000 (99.899)	
+ *Acc@Video 100.000   *Acc@Frame 99.901 
+Class 0: Precision: 0.842, Recall: 0.889, F1: 0.865
+Class 1: Precision: 0.844, Recall: 0.903, F1: 0.872
+Class 2: Precision: 0.903, Recall: 0.903, F1: 0.903
+Class 3: Precision: 0.944, Recall: 0.944, F1: 0.944
+Class 4: Precision: 0.983, Recall: 0.819, F1: 0.894
+Class 5: Precision: 0.947, Recall: 0.986, F1: 0.966
+
+ *Acc@Video 90.741 
+epoch: 51 learning rate:0.0001
+Epoch: [ 51][  0/923]	Loss 0.0109 (0.0109)	Acc@1 100.000 (100.000)	
+Epoch: [ 51][200/923]	Loss 0.0186 (0.0096)	Acc@1 100.000 (99.896)	
+Epoch: [ 51][400/923]	Loss 0.0028 (0.0097)	Acc@1 100.000 (99.881)	
+Epoch: [ 51][600/923]	Loss 0.0060 (0.0095)	Acc@1 100.000 (99.899)	
+Epoch: [ 51][800/923]	Loss 0.0055 (0.0094)	Acc@1 100.000 (99.906)	
+ *Acc@Video 100.000   *Acc@Frame 99.907 
+Class 0: Precision: 0.825, Recall: 0.917, F1: 0.868
+Class 1: Precision: 0.877, Recall: 0.889, F1: 0.883
+Class 2: Precision: 0.875, Recall: 0.875, F1: 0.875
+Class 3: Precision: 0.942, Recall: 0.903, F1: 0.922
+Class 4: Precision: 0.983, Recall: 0.819, F1: 0.894
+Class 5: Precision: 0.910, Recall: 0.986, F1: 0.947
+
+ *Acc@Video 89.815 
+epoch: 52 learning rate:0.0001
+Epoch: [ 52][  0/923]	Loss 0.0036 (0.0036)	Acc@1 100.000 (100.000)	
+Epoch: [ 52][200/923]	Loss 0.0059 (0.0089)	Acc@1 100.000 (99.938)	
+Epoch: [ 52][400/923]	Loss 0.0109 (0.0093)	Acc@1 100.000 (99.917)	
+Epoch: [ 52][600/923]	Loss 0.0214 (0.0093)	Acc@1 100.000 (99.920)	
+Epoch: [ 52][800/923]	Loss 0.0121 (0.0092)	Acc@1 100.000 (99.925)	
+ *Acc@Video 100.000   *Acc@Frame 99.923 
+Class 0: Precision: 0.825, Recall: 0.917, F1: 0.868
+Class 1: Precision: 0.925, Recall: 0.861, F1: 0.892
+Class 2: Precision: 0.887, Recall: 0.875, F1: 0.881
+Class 3: Precision: 0.930, Recall: 0.917, F1: 0.923
+Class 4: Precision: 0.970, Recall: 0.889, F1: 0.928
+Class 5: Precision: 0.922, Recall: 0.986, F1: 0.953
+
+ *Acc@Video 90.741 
+epoch: 53 learning rate:0.0001
+Epoch: [ 53][  0/923]	Loss 0.0058 (0.0058)	Acc@1 100.000 (100.000)	
+Epoch: [ 53][200/923]	Loss 0.0059 (0.0095)	Acc@1 100.000 (99.907)	
+Epoch: [ 53][400/923]	Loss 0.0036 (0.0092)	Acc@1 100.000 (99.932)	
+Epoch: [ 53][600/923]	Loss 0.0031 (0.0087)	Acc@1 100.000 (99.945)	
+Epoch: [ 53][800/923]	Loss 0.0038 (0.0083)	Acc@1 100.000 (99.948)	
+ *Acc@Video 100.000   *Acc@Frame 99.941 
+Class 0: Precision: 0.825, Recall: 0.917, F1: 0.868
+Class 1: Precision: 0.877, Recall: 0.889, F1: 0.883
+Class 2: Precision: 0.915, Recall: 0.903, F1: 0.909
+Class 3: Precision: 0.944, Recall: 0.944, F1: 0.944
+Class 4: Precision: 0.984, Recall: 0.833, F1: 0.902
+Class 5: Precision: 0.947, Recall: 0.986, F1: 0.966
+
+ *Acc@Video 91.204 
+epoch: 54 learning rate:0.0001
+Epoch: [ 54][  0/923]	Loss 0.0031 (0.0031)	Acc@1 100.000 (100.000)	
+Epoch: [ 54][200/923]	Loss 0.0054 (0.0087)	Acc@1 100.000 (99.917)	
+Epoch: [ 54][400/923]	Loss 0.0036 (0.0085)	Acc@1 100.000 (99.922)	
+Epoch: [ 54][600/923]	Loss 0.0078 (0.0085)	Acc@1 100.000 (99.917)	
+Epoch: [ 54][800/923]	Loss 0.0047 (0.0083)	Acc@1 100.000 (99.930)	
+ *Acc@Video 100.000   *Acc@Frame 99.932 
+Class 0: Precision: 0.823, Recall: 0.903, F1: 0.861
+Class 1: Precision: 0.863, Recall: 0.875, F1: 0.869
+Class 2: Precision: 0.867, Recall: 0.903, F1: 0.884
+Class 3: Precision: 0.930, Recall: 0.917, F1: 0.923
+Class 4: Precision: 0.983, Recall: 0.806, F1: 0.885
+Class 5: Precision: 0.947, Recall: 0.986, F1: 0.966
+
+ *Acc@Video 89.815 
+epoch: 55 learning rate:0.0001
+Epoch: [ 55][  0/923]	Loss 0.0044 (0.0044)	Acc@1 100.000 (100.000)	
+Epoch: [ 55][200/923]	Loss 0.0038 (0.0095)	Acc@1 100.000 (99.896)	
+Epoch: [ 55][400/923]	Loss 0.0132 (0.0082)	Acc@1 100.000 (99.938)	
+Epoch: [ 55][600/923]	Loss 0.0031 (0.0080)	Acc@1 100.000 (99.948)	
+Epoch: [ 55][800/923]	Loss 0.0049 (0.0081)	Acc@1 100.000 (99.927)	
+ *Acc@Video 100.000   *Acc@Frame 99.923 
+Class 0: Precision: 0.823, Recall: 0.903, F1: 0.861
+Class 1: Precision: 0.842, Recall: 0.889, F1: 0.865
+Class 2: Precision: 0.903, Recall: 0.903, F1: 0.903
+Class 3: Precision: 0.944, Recall: 0.931, F1: 0.937
+Class 4: Precision: 0.983, Recall: 0.806, F1: 0.885
+Class 5: Precision: 0.947, Recall: 0.986, F1: 0.966
+
+ *Acc@Video 90.278 
+epoch: 56 learning rate:0.0001
+Epoch: [ 56][  0/923]	Loss 0.0048 (0.0048)	Acc@1 100.000 (100.000)	
+Epoch: [ 56][200/923]	Loss 0.0029 (0.0077)	Acc@1 100.000 (99.948)	
+Epoch: [ 56][400/923]	Loss 0.0048 (0.0077)	Acc@1 100.000 (99.932)	
+Epoch: [ 56][600/923]	Loss 0.0068 (0.0076)	Acc@1 100.000 (99.941)	
+Epoch: [ 56][800/923]	Loss 0.0137 (0.0077)	Acc@1 100.000 (99.938)	
+ *Acc@Video 100.000   *Acc@Frame 99.939 
+Class 0: Precision: 0.823, Recall: 0.903, F1: 0.861
+Class 1: Precision: 0.877, Recall: 0.889, F1: 0.883
+Class 2: Precision: 0.913, Recall: 0.875, F1: 0.894
+Class 3: Precision: 0.944, Recall: 0.931, F1: 0.937
+Class 4: Precision: 0.984, Recall: 0.847, F1: 0.910
+Class 5: Precision: 0.923, Recall: 1.000, F1: 0.960
+
+ *Acc@Video 90.741 
+epoch: 57 learning rate:0.0001
+Epoch: [ 57][  0/923]	Loss 0.0067 (0.0067)	Acc@1 100.000 (100.000)	
+Epoch: [ 57][200/923]	Loss 0.0063 (0.0074)	Acc@1 100.000 (99.938)	
+Epoch: [ 57][400/923]	Loss 0.0107 (0.0076)	Acc@1 100.000 (99.932)	
+Epoch: [ 57][600/923]	Loss 0.0036 (0.0075)	Acc@1 100.000 (99.931)	
+Epoch: [ 57][800/923]	Loss 0.0050 (0.0074)	Acc@1 100.000 (99.940)	
+ *Acc@Video 100.000   *Acc@Frame 99.944 
+Class 0: Precision: 0.855, Recall: 0.903, F1: 0.878
+Class 1: Precision: 0.875, Recall: 0.875, F1: 0.875
+Class 2: Precision: 0.915, Recall: 0.903, F1: 0.909
+Class 3: Precision: 0.932, Recall: 0.944, F1: 0.938
+Class 4: Precision: 0.985, Recall: 0.889, F1: 0.934
+Class 5: Precision: 0.947, Recall: 0.986, F1: 0.966
+
+ *Acc@Video 91.667 
+epoch: 58 learning rate:0.0001
+Epoch: [ 58][  0/923]	Loss 0.0228 (0.0228)	Acc@1 97.917 (97.917)	
+Epoch: [ 58][200/923]	Loss 0.0033 (0.0070)	Acc@1 100.000 (99.938)	
+Epoch: [ 58][400/923]	Loss 0.0039 (0.0073)	Acc@1 100.000 (99.943)	
+Epoch: [ 58][600/923]	Loss 0.0027 (0.0072)	Acc@1 100.000 (99.958)	
+Epoch: [ 58][800/923]	Loss 0.0095 (0.0071)	Acc@1 100.000 (99.956)	
+ *Acc@Video 100.000   *Acc@Frame 99.955 
+Class 0: Precision: 0.835, Recall: 0.917, F1: 0.874
+Class 1: Precision: 0.900, Recall: 0.875, F1: 0.887
+Class 2: Precision: 0.878, Recall: 0.903, F1: 0.890
+Class 3: Precision: 0.929, Recall: 0.903, F1: 0.915
+Class 4: Precision: 0.984, Recall: 0.875, F1: 0.926
+Class 5: Precision: 0.947, Recall: 0.986, F1: 0.966
+
+ *Acc@Video 90.972 
+epoch: 59 learning rate:0.0001
+Epoch: [ 59][  0/923]	Loss 0.0079 (0.0079)	Acc@1 100.000 (100.000)	
+Epoch: [ 59][200/923]	Loss 0.0054 (0.0072)	Acc@1 100.000 (99.969)	
+Epoch: [ 59][400/923]	Loss 0.0087 (0.0072)	Acc@1 100.000 (99.943)	
+Epoch: [ 59][600/923]	Loss 0.0030 (0.0071)	Acc@1 100.000 (99.948)	
+Epoch: [ 59][800/923]	Loss 0.0027 (0.0070)	Acc@1 100.000 (99.940)	
+ *Acc@Video 100.000   *Acc@Frame 99.932 
+Class 0: Precision: 0.831, Recall: 0.889, F1: 0.859
+Class 1: Precision: 0.844, Recall: 0.903, F1: 0.872
+Class 2: Precision: 0.878, Recall: 0.903, F1: 0.890
+Class 3: Precision: 0.944, Recall: 0.931, F1: 0.937
+Class 4: Precision: 0.983, Recall: 0.819, F1: 0.894
+Class 5: Precision: 0.959, Recall: 0.972, F1: 0.966
+
+ *Acc@Video 90.278 
+epoch: 60 learning rate:2e-05
+Epoch: [ 60][  0/923]	Loss 0.0068 (0.0068)	Acc@1 100.000 (100.000)	
+Epoch: [ 60][200/923]	Loss 0.0047 (0.0077)	Acc@1 100.000 (99.907)	
+Epoch: [ 60][400/923]	Loss 0.0055 (0.0072)	Acc@1 100.000 (99.938)	
+Epoch: [ 60][600/923]	Loss 0.0165 (0.0068)	Acc@1 100.000 (99.951)	
+Epoch: [ 60][800/923]	Loss 0.0061 (0.0068)	Acc@1 100.000 (99.948)	
+ *Acc@Video 100.000   *Acc@Frame 99.953 
+Class 0: Precision: 0.829, Recall: 0.875, F1: 0.851
+Class 1: Precision: 0.833, Recall: 0.903, F1: 0.867
+Class 2: Precision: 0.903, Recall: 0.903, F1: 0.903
+Class 3: Precision: 0.944, Recall: 0.944, F1: 0.944
+Class 4: Precision: 0.983, Recall: 0.806, F1: 0.885
+Class 5: Precision: 0.947, Recall: 0.986, F1: 0.966
+
+ *Acc@Video 90.278 
+epoch: 61 learning rate:2e-05
+Epoch: [ 61][  0/923]	Loss 0.0039 (0.0039)	Acc@1 100.000 (100.000)	
+Epoch: [ 61][200/923]	Loss 0.0045 (0.0070)	Acc@1 100.000 (99.969)	
+Epoch: [ 61][400/923]	Loss 0.0147 (0.0068)	Acc@1 100.000 (99.958)	
+Epoch: [ 61][600/923]	Loss 0.0017 (0.0067)	Acc@1 100.000 (99.962)	
+Epoch: [ 61][800/923]	Loss 0.0028 (0.0067)	Acc@1 100.000 (99.958)	
+ *Acc@Video 100.000   *Acc@Frame 99.959 
+Class 0: Precision: 0.865, Recall: 0.889, F1: 0.877
+Class 1: Precision: 0.867, Recall: 0.903, F1: 0.884
+Class 2: Precision: 0.890, Recall: 0.903, F1: 0.897
+Class 3: Precision: 0.943, Recall: 0.917, F1: 0.930
+Class 4: Precision: 0.985, Recall: 0.889, F1: 0.934
+Class 5: Precision: 0.947, Recall: 0.986, F1: 0.966
+
+ *Acc@Video 91.435 
+epoch: 62 learning rate:2e-05
+Epoch: [ 62][  0/923]	Loss 0.0033 (0.0033)	Acc@1 100.000 (100.000)	
+Epoch: [ 62][200/923]	Loss 0.0093 (0.0067)	Acc@1 100.000 (99.959)	
+Epoch: [ 62][400/923]	Loss 0.0137 (0.0068)	Acc@1 100.000 (99.953)	
+Epoch: [ 62][600/923]	Loss 0.0061 (0.0072)	Acc@1 100.000 (99.934)	
+Epoch: [ 62][800/923]	Loss 0.0058 (0.0072)	Acc@1 100.000 (99.943)	
+ *Acc@Video 100.000   *Acc@Frame 99.941 
+Class 0: Precision: 0.825, Recall: 0.917, F1: 0.868
+Class 1: Precision: 0.865, Recall: 0.889, F1: 0.877
+Class 2: Precision: 0.890, Recall: 0.903, F1: 0.897
+Class 3: Precision: 0.943, Recall: 0.917, F1: 0.930
+Class 4: Precision: 0.983, Recall: 0.819, F1: 0.894
+Class 5: Precision: 0.947, Recall: 0.986, F1: 0.966
+
+ *Acc@Video 90.509 
+epoch: 63 learning rate:2e-05
+Epoch: [ 63][  0/923]	Loss 0.0068 (0.0068)	Acc@1 100.000 (100.000)	
+Epoch: [ 63][200/923]	Loss 0.0187 (0.0077)	Acc@1 100.000 (99.907)	
+Epoch: [ 63][400/923]	Loss 0.0045 (0.0071)	Acc@1 100.000 (99.927)	
+Epoch: [ 63][600/923]	Loss 0.0047 (0.0070)	Acc@1 100.000 (99.941)	
+Epoch: [ 63][800/923]	Loss 0.0073 (0.0069)	Acc@1 100.000 (99.948)	
+ *Acc@Video 100.000   *Acc@Frame 99.941 
+Class 0: Precision: 0.849, Recall: 0.861, F1: 0.855
+Class 1: Precision: 0.877, Recall: 0.889, F1: 0.883
+Class 2: Precision: 0.867, Recall: 0.903, F1: 0.884
+Class 3: Precision: 0.943, Recall: 0.917, F1: 0.930
+Class 4: Precision: 0.956, Recall: 0.903, F1: 0.929
+Class 5: Precision: 0.959, Recall: 0.972, F1: 0.966
+
+ *Acc@Video 90.741 
+epoch: 64 learning rate:2e-05
+Epoch: [ 64][  0/923]	Loss 0.0024 (0.0024)	Acc@1 100.000 (100.000)	
+Epoch: [ 64][200/923]	Loss 0.0052 (0.0062)	Acc@1 100.000 (99.948)	
+Epoch: [ 64][400/923]	Loss 0.0166 (0.0068)	Acc@1 100.000 (99.948)	
+Epoch: [ 64][600/923]	Loss 0.0064 (0.0067)	Acc@1 100.000 (99.955)	
+Epoch: [ 64][800/923]	Loss 0.0079 (0.0067)	Acc@1 100.000 (99.953)	
+ *Acc@Video 100.000   *Acc@Frame 99.953 
+Class 0: Precision: 0.823, Recall: 0.903, F1: 0.861
+Class 1: Precision: 0.865, Recall: 0.889, F1: 0.877
+Class 2: Precision: 0.915, Recall: 0.903, F1: 0.909
+Class 3: Precision: 0.944, Recall: 0.944, F1: 0.944
+Class 4: Precision: 0.984, Recall: 0.833, F1: 0.902
+Class 5: Precision: 0.947, Recall: 0.986, F1: 0.966
+
+ *Acc@Video 90.972 
+epoch: 65 learning rate:2e-05
+Epoch: [ 65][  0/923]	Loss 0.0057 (0.0057)	Acc@1 100.000 (100.000)	
+Epoch: [ 65][200/923]	Loss 0.0072 (0.0067)	Acc@1 100.000 (99.917)	
+Epoch: [ 65][400/923]	Loss 0.0049 (0.0063)	Acc@1 100.000 (99.948)	
+Epoch: [ 65][600/923]	Loss 0.0042 (0.0063)	Acc@1 100.000 (99.955)	
+Epoch: [ 65][800/923]	Loss 0.0031 (0.0065)	Acc@1 100.000 (99.956)	
+ *Acc@Video 100.000   *Acc@Frame 99.955 
+Class 0: Precision: 0.825, Recall: 0.917, F1: 0.868
+Class 1: Precision: 0.865, Recall: 0.889, F1: 0.877
+Class 2: Precision: 0.903, Recall: 0.903, F1: 0.903
+Class 3: Precision: 0.944, Recall: 0.944, F1: 0.944
+Class 4: Precision: 0.983, Recall: 0.819, F1: 0.894
+Class 5: Precision: 0.946, Recall: 0.972, F1: 0.959
+
+ *Acc@Video 90.741 
+epoch: 66 learning rate:2e-05
+Epoch: [ 66][  0/923]	Loss 0.0033 (0.0033)	Acc@1 100.000 (100.000)	
+Epoch: [ 66][200/923]	Loss 0.0037 (0.0066)	Acc@1 100.000 (99.948)	
+Epoch: [ 66][400/923]	Loss 0.0032 (0.0070)	Acc@1 100.000 (99.927)	
+Epoch: [ 66][600/923]	Loss 0.0056 (0.0071)	Acc@1 100.000 (99.924)	
+Epoch: [ 66][800/923]	Loss 0.0040 (0.0070)	Acc@1 100.000 (99.935)	
+ *Acc@Video 100.000   *Acc@Frame 99.928 
+Class 0: Precision: 0.823, Recall: 0.903, F1: 0.861
+Class 1: Precision: 0.851, Recall: 0.875, F1: 0.863
+Class 2: Precision: 0.929, Recall: 0.903, F1: 0.915
+Class 3: Precision: 0.932, Recall: 0.958, F1: 0.945
+Class 4: Precision: 0.983, Recall: 0.819, F1: 0.894
+Class 5: Precision: 0.947, Recall: 0.986, F1: 0.966
+
+ *Acc@Video 90.741 
+epoch: 67 learning rate:2e-05
+Epoch: [ 67][  0/923]	Loss 0.0041 (0.0041)	Acc@1 100.000 (100.000)	
+Epoch: [ 67][200/923]	Loss 0.0020 (0.0066)	Acc@1 100.000 (99.959)	
+Epoch: [ 67][400/923]	Loss 0.0152 (0.0062)	Acc@1 100.000 (99.974)	
+Epoch: [ 67][600/923]	Loss 0.0064 (0.0064)	Acc@1 100.000 (99.969)	
+Epoch: [ 67][800/923]	Loss 0.0071 (0.0065)	Acc@1 100.000 (99.958)	
+ *Acc@Video 100.000   *Acc@Frame 99.959 
+Class 0: Precision: 0.795, Recall: 0.917, F1: 0.852
+Class 1: Precision: 0.861, Recall: 0.861, F1: 0.861
+Class 2: Precision: 0.915, Recall: 0.903, F1: 0.909
+Class 3: Precision: 0.932, Recall: 0.958, F1: 0.945
+Class 4: Precision: 0.982, Recall: 0.778, F1: 0.868
+Class 5: Precision: 0.947, Recall: 0.986, F1: 0.966
+
+ *Acc@Video 90.046 
+epoch: 68 learning rate:2e-05
+Epoch: [ 68][  0/923]	Loss 0.0064 (0.0064)	Acc@1 100.000 (100.000)	
+Epoch: [ 68][200/923]	Loss 0.0105 (0.0070)	Acc@1 100.000 (99.938)	
+Epoch: [ 68][400/923]	Loss 0.0059 (0.0072)	Acc@1 100.000 (99.932)	
+Epoch: [ 68][600/923]	Loss 0.0018 (0.0067)	Acc@1 100.000 (99.948)	
+Epoch: [ 68][800/923]	Loss 0.0061 (0.0066)	Acc@1 100.000 (99.948)	
+ *Acc@Video 100.000   *Acc@Frame 99.950 
+Class 0: Precision: 0.855, Recall: 0.903, F1: 0.878
+Class 1: Precision: 0.925, Recall: 0.861, F1: 0.892
+Class 2: Precision: 0.878, Recall: 0.903, F1: 0.890
+Class 3: Precision: 0.929, Recall: 0.903, F1: 0.915
+Class 4: Precision: 0.957, Recall: 0.931, F1: 0.944
+Class 5: Precision: 0.947, Recall: 0.986, F1: 0.966
+
+ *Acc@Video 91.435 
+epoch: 69 learning rate:2e-05
+Epoch: [ 69][  0/923]	Loss 0.0202 (0.0202)	Acc@1 100.000 (100.000)	
+Epoch: [ 69][200/923]	Loss 0.0042 (0.0065)	Acc@1 100.000 (99.979)	
+Epoch: [ 69][400/923]	Loss 0.0034 (0.0066)	Acc@1 100.000 (99.958)	
+Epoch: [ 69][600/923]	Loss 0.0021 (0.0067)	Acc@1 100.000 (99.955)	
+Epoch: [ 69][800/923]	Loss 0.0033 (0.0069)	Acc@1 100.000 (99.945)	
+ *Acc@Video 100.000   *Acc@Frame 99.941 
+Class 0: Precision: 0.825, Recall: 0.917, F1: 0.868
+Class 1: Precision: 0.924, Recall: 0.847, F1: 0.884
+Class 2: Precision: 0.867, Recall: 0.903, F1: 0.884
+Class 3: Precision: 0.928, Recall: 0.889, F1: 0.908
+Class 4: Precision: 0.970, Recall: 0.889, F1: 0.928
+Class 5: Precision: 0.934, Recall: 0.986, F1: 0.959
+
+ *Acc@Video 90.509 
+epoch: 70 learning rate:2e-05
+Epoch: [ 70][  0/923]	Loss 0.0052 (0.0052)	Acc@1 100.000 (100.000)	
+Epoch: [ 70][200/923]	Loss 0.0042 (0.0062)	Acc@1 100.000 (99.969)	
+Epoch: [ 70][400/923]	Loss 0.0056 (0.0063)	Acc@1 100.000 (99.958)	
+Epoch: [ 70][600/923]	Loss 0.0057 (0.0068)	Acc@1 100.000 (99.941)	
+Epoch: [ 70][800/923]	Loss 0.0036 (0.0064)	Acc@1 100.000 (99.951)	
+ *Acc@Video 100.000   *Acc@Frame 99.950 
+Class 0: Precision: 0.857, Recall: 0.917, F1: 0.886
+Class 1: Precision: 0.925, Recall: 0.861, F1: 0.892
+Class 2: Precision: 0.890, Recall: 0.903, F1: 0.897
+Class 3: Precision: 0.930, Recall: 0.917, F1: 0.923
+Class 4: Precision: 0.971, Recall: 0.931, F1: 0.950
+Class 5: Precision: 0.947, Recall: 0.986, F1: 0.966
+
+ *Acc@Video 91.898 
+better model!
+epoch: 71 learning rate:2e-05
+Epoch: [ 71][  0/923]	Loss 0.0045 (0.0045)	Acc@1 100.000 (100.000)	
+Epoch: [ 71][200/923]	Loss 0.0109 (0.0068)	Acc@1 100.000 (99.938)	
+Epoch: [ 71][400/923]	Loss 0.0116 (0.0065)	Acc@1 100.000 (99.953)	
+Epoch: [ 71][600/923]	Loss 0.0047 (0.0064)	Acc@1 100.000 (99.951)	
+Epoch: [ 71][800/923]	Loss 0.0021 (0.0066)	Acc@1 100.000 (99.945)	
+ *Acc@Video 100.000   *Acc@Frame 99.944 
+Class 0: Precision: 0.847, Recall: 0.847, F1: 0.847
+Class 1: Precision: 0.899, Recall: 0.861, F1: 0.879
+Class 2: Precision: 0.823, Recall: 0.903, F1: 0.861
+Class 3: Precision: 0.929, Recall: 0.903, F1: 0.915
+Class 4: Precision: 0.942, Recall: 0.903, F1: 0.922
+Class 5: Precision: 0.959, Recall: 0.972, F1: 0.966
+
+ *Acc@Video 89.815 
+epoch: 72 learning rate:2e-05
+Epoch: [ 72][  0/923]	Loss 0.0058 (0.0058)	Acc@1 100.000 (100.000)	
+Epoch: [ 72][200/923]	Loss 0.0059 (0.0057)	Acc@1 100.000 (99.979)	
+Epoch: [ 72][400/923]	Loss 0.0024 (0.0061)	Acc@1 100.000 (99.958)	
+Epoch: [ 72][600/923]	Loss 0.0031 (0.0061)	Acc@1 100.000 (99.962)	
+Epoch: [ 72][800/923]	Loss 0.0066 (0.0062)	Acc@1 100.000 (99.956)	
+ *Acc@Video 100.000   *Acc@Frame 99.953 
+Class 0: Precision: 0.842, Recall: 0.889, F1: 0.865
+Class 1: Precision: 0.855, Recall: 0.903, F1: 0.878
+Class 2: Precision: 0.903, Recall: 0.903, F1: 0.903
+Class 3: Precision: 0.944, Recall: 0.931, F1: 0.937
+Class 4: Precision: 0.984, Recall: 0.847, F1: 0.910
+Class 5: Precision: 0.947, Recall: 0.986, F1: 0.966
+
+ *Acc@Video 90.972 
+epoch: 73 learning rate:2e-05
+Epoch: [ 73][  0/923]	Loss 0.0068 (0.0068)	Acc@1 100.000 (100.000)	
+Epoch: [ 73][200/923]	Loss 0.0119 (0.0064)	Acc@1 100.000 (99.959)	
+Epoch: [ 73][400/923]	Loss 0.0045 (0.0063)	Acc@1 100.000 (99.969)	
+Epoch: [ 73][600/923]	Loss 0.0041 (0.0066)	Acc@1 100.000 (99.948)	
+Epoch: [ 73][800/923]	Loss 0.0289 (0.0066)	Acc@1 97.917 (99.951)	
+ *Acc@Video 100.000   *Acc@Frame 99.950 
+Class 0: Precision: 0.805, Recall: 0.917, F1: 0.857
+Class 1: Precision: 0.865, Recall: 0.889, F1: 0.877
+Class 2: Precision: 0.867, Recall: 0.903, F1: 0.884
+Class 3: Precision: 0.942, Recall: 0.903, F1: 0.922
+Class 4: Precision: 0.982, Recall: 0.778, F1: 0.868
+Class 5: Precision: 0.947, Recall: 0.986, F1: 0.966
+
+ *Acc@Video 89.583 
+epoch: 74 learning rate:2e-05
+Epoch: [ 74][  0/923]	Loss 0.0037 (0.0037)	Acc@1 100.000 (100.000)	
+Epoch: [ 74][200/923]	Loss 0.0053 (0.0062)	Acc@1 100.000 (99.969)	
+Epoch: [ 74][400/923]	Loss 0.0029 (0.0067)	Acc@1 100.000 (99.958)	
+Epoch: [ 74][600/923]	Loss 0.0033 (0.0065)	Acc@1 100.000 (99.962)	
+Epoch: [ 74][800/923]	Loss 0.0042 (0.0064)	Acc@1 100.000 (99.969)	
+ *Acc@Video 100.000   *Acc@Frame 99.968 
+Class 0: Precision: 0.805, Recall: 0.917, F1: 0.857
+Class 1: Precision: 0.865, Recall: 0.889, F1: 0.877
+Class 2: Precision: 0.915, Recall: 0.903, F1: 0.909
+Class 3: Precision: 0.944, Recall: 0.944, F1: 0.944
+Class 4: Precision: 0.983, Recall: 0.792, F1: 0.877
+Class 5: Precision: 0.947, Recall: 0.986, F1: 0.966
+
+ *Acc@Video 90.509 
+epoch: 75 learning rate:2e-05
+Epoch: [ 75][  0/923]	Loss 0.0160 (0.0160)	Acc@1 100.000 (100.000)	
+Epoch: [ 75][200/923]	Loss 0.0071 (0.0068)	Acc@1 100.000 (99.907)	
+Epoch: [ 75][400/923]	Loss 0.0057 (0.0065)	Acc@1 100.000 (99.927)	

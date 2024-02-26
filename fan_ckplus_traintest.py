@@ -20,8 +20,9 @@ def main():
     args = parser.parse_args()
     best_acc = 0
     at_type = ['self-attention', 'self_relation-attention'][args.at_type]
-    logger = util.Logger('./log/','fan_ckplus')
+    logger = util.Logger('./log/','cktrain_fold1_forlossfan_ckplus')
     logger.print('The attention method is {:}, learning rate: {:}'.format(at_type, args.lr))
+    logger2 = util.Logger('./log/','cktrain_loss_fold1fan_ckplus')
     ''' Load data '''
     video_root = './data/face/ck_face'
     video_list = './data/txt/CK+_10-fold_sample_IDascendorder_step10.txt'
@@ -44,8 +45,8 @@ def main():
     logger.print('frame attention network (fan) ck+ dataset, learning rate: {:}'.format(args.lr))
 
     for epoch in range(args.epochs):
-        train(train_loader, model, optimizer, epoch, logger)
-        acc_epoch = val(val_loader, model, at_type, logger)
+        train(train_loader, model, optimizer, epoch, logger, logger2)
+        acc_epoch = val(val_loader, model, at_type, logger, logger2)
         is_best = acc_epoch > best_acc
         if is_best:
             logger.print('better model!')
@@ -59,7 +60,7 @@ def main():
         lr_scheduler.step()
         logger.print("epoch: {:} learning rate:{:}".format(epoch+1, optimizer.param_groups[0]['lr']))
         
-def train(train_loader, model, optimizer, epoch, logger):
+def train(train_loader, model, optimizer, epoch, logger, logger2):
     losses = util.AverageMeter()
     topframe = util.AverageMeter()
     topVideo = util.AverageMeter()
@@ -104,6 +105,7 @@ def train(train_loader, model, optimizer, epoch, logger):
     index_matrix = []
     for i in range(int(max(index_vector)) + 1):
         index_matrix.append(index_vector == i)
+    logger2.print('Epoch: {:3d}\ntrain loss : {losses}'.format(epoch,losses=losses))
 
     index_matrix = torch.stack(index_matrix, dim=0).to(DEVICE).float()  # [21570]  --->  [380, 21570]
     output_store_fc = torch.cat(output_store_fc, dim=0)  # [256,7] ... [256,7]  --->  [21570, 7]
@@ -117,9 +119,9 @@ def train(train_loader, model, optimizer, epoch, logger):
     logger.print(' *Acc@Video {topVideo.avg:.3f}   *Acc@Frame {topframe.avg:.3f} '.format(topVideo=topVideo, topframe=topframe))
 
 
-def val(val_loader, model, at_type, logger):
+def val(val_loader, model, at_type, logger, logger2=None):
     topVideo = util.AverageMeter()
-
+    losses = util.AverageMeter()
     # switch to evaluate mode
     model.eval()
     output_store_fc = []
@@ -158,7 +160,10 @@ def val(val_loader, model, at_type, logger):
             pred_score = model(vm=weightmean_sourcefc, phrase='eval', AT_level='pred')
         if at_type == 'self_relation-attention':
             pred_score  = model(vectors=output_store_fc, vm=weightmean_sourcefc, alphas_from1=output_alpha, index_matrix=index_matrix, phrase='eval', AT_level='second_level')
-
+        if logger2 is not None:
+            loss = F.cross_entropy(pred_score, target_vector)
+            losses.update(loss.item(), target_vector.size(0))
+            logger2.print('val loss :{losses}'.format(losses=losses))
         acc_video = util.accuracy(pred_score.cpu(), target_vector.cpu(), topk=(1,))
         topVideo.update(acc_video[0], i + 1)
         logger.print(' *Acc@Video {topVideo.avg:.3f} '.format(topVideo=topVideo))

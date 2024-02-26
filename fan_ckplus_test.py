@@ -13,7 +13,9 @@ def main():
                         help= '0 is self-attention; 1 is self + relation-attention')
     parser.add_argument('--epochs', default=60, type=int, metavar='N',
                         help='number of total epochs to run')
-    parser.add_argument('-f', '--fold', default=1, type=int, help='which fold used for ck+ test')
+    
+    parser.add_argument('-f', '--fold', default=10, type=int, help='which fold used for ck+ test')
+
     parser.add_argument('--lr', '--learning-rate', default=1e-1, type=float,
                         metavar='LR', help='initial learning rate')
     parser.add_argument('-e', '--evaluate', default=True, dest='evaluate', action='store_true',
@@ -21,7 +23,7 @@ def main():
     args = parser.parse_args()
     best_acc = 0
     at_type = ['self-attention', 'self_relation-attention'][args.at_type]
-    logger = util.Logger('./log/','fan_ckplus')
+    logger = util.Logger('./log/','10-3evalfan_ckplus')
     logger.print('The attention method is {:}, learning rate: {:}'.format(at_type, args.lr))
     ''' Load data '''
     # root_train = './data/face/ck_face'
@@ -38,7 +40,7 @@ def main():
     train_loader, val_loader = load.ckplus_faces_fan(video_root, video_list, args.fold, batchsize_train, batchsize_eval)
     ''' Load model '''
     _structure = networks.resnet18_at(at_type=at_type)
-    _parameterDir = './model/ckplustold1self_relation-attention_40_96.9697'
+    _parameterDir = './model/fold10model/fold10-3self_relation-attention_1_90.9091'
     model = load.model_parameters(_structure, _parameterDir)
     # model_paths = ['./model/ckplusfold10self_relation-attention_24_95.4545', './model/ckplusfold9self_relation-attention_6_100.0',
     #                 './model/ckplusfold8self_relation-attention_10_100.0', './model/ckplusfold7self_relation-attention_54_96.5517',

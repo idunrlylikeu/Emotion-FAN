@@ -1,0 +1,17 @@
+13-Dec-2023-08-16-40 --- args ---
+The attention method is self_relation-attention, learning rate: 0.0001
+frame attention network (fan) rav dataset, learning rate: 0.0001
+Epoch: [  0][  0/320]	Loss 1.9452 (1.9452)	Acc@1 12.500 (12.500)	
+Epoch: [  0][200/320]	Loss 1.5353 (1.6552)	Acc@1 43.750 (35.541)	
+ *Acc@Video 52.727   *Acc@Frame 43.633 
+ *Acc@Video 50.000 
+better model!
+epoch: 1 learning rate:0.0001
+Epoch: [  1][  0/320]	Loss 1.1976 (1.1976)	Acc@1 64.583 (64.583)	
+Epoch: [  1][200/320]	Loss 1.0431 (1.1239)	Acc@1 70.833 (67.475)	
+ *Acc@Video 73.636   *Acc@Frame 70.397 
+ *Acc@Video 58.000 
+better model!
+epoch: 2 learning rate:0.0001
+Epoch: [  2][  0/320]	Loss 0.8249 (0.8249)	Acc@1 81.250 (81.250)	
+Epoch: [  2][200/320]	Loss 0.6851 (0.8118)	Acc@1 85.417 (79.260)	

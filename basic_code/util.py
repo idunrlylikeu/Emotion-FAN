@@ -40,6 +40,9 @@ class AverageMeter(object):
 
     def __init__(self):
         self.reset()
+        
+    def __str__(self) -> str:
+        return f'{self.avg:.4f} ({self.val:.4f})'
 
     def reset(self):
         self.val = 0

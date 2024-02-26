@@ -1,0 +1,98 @@
+02-Dec-2023-10-29-05 --- args ---
+baseline rav dataset, learning rate: 4e-06
+Epoch: [  0][  0/321]	Loss 2.3044 (2.3044)	Acc_Iter@1 10.417 (10.417)	
+Epoch: [  0][200/321]	Loss 0.8625 (1.3867)	Acc_Iter@1 79.167 (50.487)	
+ *Acc@Video_soft 82.727   *Acc@Frame 61.415 
+ *Acc@Video 32.000 
+better model!
+epoch: 1 learning rate:4e-06
+Epoch: [  1][  0/321]	Loss 0.7468 (0.7468)	Acc_Iter@1 75.000 (75.000)	
+Epoch: [  1][200/321]	Loss 0.4371 (0.5311)	Acc_Iter@1 91.667 (87.199)	
+ *Acc@Video_soft 95.455   *Acc@Frame 88.656 
+ *Acc@Video 34.000 
+better model!
+epoch: 2 learning rate:4e-06
+Epoch: [  2][  0/321]	Loss 0.3619 (0.3619)	Acc_Iter@1 91.667 (91.667)	
+Epoch: [  2][200/321]	Loss 0.4036 (0.3366)	Acc_Iter@1 85.417 (92.745)	
+ *Acc@Video_soft 98.182   *Acc@Frame 93.235 
+ *Acc@Video 42.000 
+better model!
+epoch: 3 learning rate:4e-06
+Epoch: [  3][  0/321]	Loss 0.2158 (0.2158)	Acc_Iter@1 97.917 (97.917)	
+Epoch: [  3][200/321]	Loss 0.3005 (0.2539)	Acc_Iter@1 91.667 (95.015)	
+ *Acc@Video_soft 99.091   *Acc@Frame 95.187 
+ *Acc@Video 42.000 
+epoch: 4 learning rate:4e-06
+Epoch: [  4][  0/321]	Loss 0.2053 (0.2053)	Acc_Iter@1 95.833 (95.833)	
+Epoch: [  4][200/321]	Loss 0.2255 (0.2044)	Acc_Iter@1 93.750 (96.010)	
+ *Acc@Video_soft 99.091   *Acc@Frame 96.240 
+ *Acc@Video 42.000 
+epoch: 5 learning rate:4e-06
+Epoch: [  5][  0/321]	Loss 0.2294 (0.2294)	Acc_Iter@1 95.833 (95.833)	
+Epoch: [  5][200/321]	Loss 0.0961 (0.1679)	Acc_Iter@1 100.000 (96.777)	
+ *Acc@Video_soft 100.000   *Acc@Frame 96.813 
+ *Acc@Video 42.000 
+epoch: 6 learning rate:4e-06
+Epoch: [  6][  0/321]	Loss 0.1548 (0.1548)	Acc_Iter@1 95.833 (95.833)	
+Epoch: [  6][200/321]	Loss 0.1084 (0.1448)	Acc_Iter@1 97.917 (97.181)	
+ *Acc@Video_soft 100.000   *Acc@Frame 97.262 
+ *Acc@Video 42.000 
+epoch: 7 learning rate:4e-06
+Epoch: [  7][  0/321]	Loss 0.1304 (0.1304)	Acc_Iter@1 100.000 (100.000)	
+Epoch: [  7][200/321]	Loss 0.1309 (0.1274)	Acc_Iter@1 97.917 (97.512)	
+ *Acc@Video_soft 100.000   *Acc@Frame 97.509 
+ *Acc@Video 40.000 
+epoch: 8 learning rate:4e-06
+Epoch: [  8][  0/321]	Loss 0.1230 (0.1230)	Acc_Iter@1 97.917 (97.917)	
+Epoch: [  8][200/321]	Loss 0.1037 (0.1144)	Acc_Iter@1 97.917 (97.803)	
+ *Acc@Video_soft 100.000   *Acc@Frame 97.867 
+ *Acc@Video 40.000 
+epoch: 9 learning rate:4e-06
+Epoch: [  9][  0/321]	Loss 0.1140 (0.1140)	Acc_Iter@1 100.000 (100.000)	
+Epoch: [  9][200/321]	Loss 0.0940 (0.1025)	Acc_Iter@1 97.917 (97.989)	
+ *Acc@Video_soft 100.000   *Acc@Frame 98.107 
+ *Acc@Video 40.000 
+epoch: 10 learning rate:4e-06
+Epoch: [ 10][  0/321]	Loss 0.1921 (0.1921)	Acc_Iter@1 93.750 (93.750)	
+Epoch: [ 10][200/321]	Loss 0.1080 (0.0952)	Acc_Iter@1 97.917 (98.020)	
+ *Acc@Video_soft 100.000   *Acc@Frame 98.101 
+ *Acc@Video 40.000 
+epoch: 11 learning rate:4e-06
+Epoch: [ 11][  0/321]	Loss 0.0707 (0.0707)	Acc_Iter@1 100.000 (100.000)	
+Epoch: [ 11][200/321]	Loss 0.0883 (0.0857)	Acc_Iter@1 97.917 (98.352)	
+ *Acc@Video_soft 100.000   *Acc@Frame 98.393 
+ *Acc@Video 40.000 
+epoch: 12 learning rate:4e-06
+Epoch: [ 12][  0/321]	Loss 0.0647 (0.0647)	Acc_Iter@1 100.000 (100.000)	
+Epoch: [ 12][200/321]	Loss 0.0649 (0.0791)	Acc_Iter@1 100.000 (98.549)	
+ *Acc@Video_soft 100.000   *Acc@Frame 98.523 
+ *Acc@Video 40.000 
+epoch: 13 learning rate:4e-06
+Epoch: [ 13][  0/321]	Loss 0.0718 (0.0718)	Acc_Iter@1 100.000 (100.000)	
+Epoch: [ 13][200/321]	Loss 0.0306 (0.0698)	Acc_Iter@1 100.000 (99.046)	
+ *Acc@Video_soft 100.000   *Acc@Frame 98.901 
+ *Acc@Video 40.000 
+epoch: 14 learning rate:4e-06
+Epoch: [ 14][  0/321]	Loss 0.0368 (0.0368)	Acc_Iter@1 100.000 (100.000)	
+Epoch: [ 14][200/321]	Loss 0.0809 (0.0682)	Acc_Iter@1 95.833 (98.694)	
+ *Acc@Video_soft 100.000   *Acc@Frame 98.764 
+ *Acc@Video 40.000 
+epoch: 15 learning rate:4e-06
+Epoch: [ 15][  0/321]	Loss 0.1074 (0.1074)	Acc_Iter@1 97.917 (97.917)	
+Epoch: [ 15][200/321]	Loss 0.0633 (0.0613)	Acc_Iter@1 100.000 (98.932)	
+ *Acc@Video_soft 100.000   *Acc@Frame 98.946 
+ *Acc@Video 40.000 
+epoch: 16 learning rate:4e-06
+Epoch: [ 16][  0/321]	Loss 0.0387 (0.0387)	Acc_Iter@1 100.000 (100.000)	
+Epoch: [ 16][200/321]	Loss 0.0852 (0.0611)	Acc_Iter@1 95.833 (98.725)	
+ *Acc@Video_soft 100.000   *Acc@Frame 98.868 
+ *Acc@Video 40.000 
+epoch: 17 learning rate:4e-06
+Epoch: [ 17][  0/321]	Loss 0.0377 (0.0377)	Acc_Iter@1 100.000 (100.000)	
+Epoch: [ 17][200/321]	Loss 0.0655 (0.0561)	Acc_Iter@1 97.917 (99.005)	
+ *Acc@Video_soft 100.000   *Acc@Frame 99.057 
+ *Acc@Video 40.000 
+epoch: 18 learning rate:4e-06
+Epoch: [ 18][  0/321]	Loss 0.0529 (0.0529)	Acc_Iter@1 100.000 (100.000)	
+Epoch: [ 18][200/321]	Loss 0.0788 (0.0524)	Acc_Iter@1 97.917 (99.098)	
+ *Acc@Video_soft 100.000   *Acc@Frame 98.992 
