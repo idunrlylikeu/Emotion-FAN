@@ -23,8 +23,9 @@ def main():
     args = parser.parse_args()
     best_acc = 0
     at_type = ['self-attention', 'self_relation-attention'][args.at_type]
-    logger = util.Logger('./log/','10-3evalfan_ckplus')
+    logger = util.Logger('./log/','evalckfold10_glass10-3_train_fan_ckplus')
     logger.print('The attention method is {:}, learning rate: {:}'.format(at_type, args.lr))
+    logger.print("fold {:}".format(args.fold))
     ''' Load data '''
     # root_train = './data/face/ck_face'
     # list_train = './data/txt/all_ck+.txt'
@@ -33,11 +34,20 @@ def main():
     # list_eval = './data/txt/all_oulu.txt'
     # batchsize_eval= 64
     # train_loader, val_loader = load.oulu_faces_fan_ck(root_train, list_train, batchsize_train, root_eval, list_eval, batchsize_eval)
-    video_root = './data/face/ck_face'
+
+    video_root = './data/face/ck_face_glass'
     video_list = './data/txt/CK+_10-fold_sample_IDascendorder_step10.txt'
     batchsize_train= 48
     batchsize_eval= 64
     train_loader, val_loader = load.ckplus_faces_fan(video_root, video_list, args.fold, batchsize_train, batchsize_eval)
+
+    # root_train = './data/face/all_ravdess'
+    # list_train = './data/txt/all_ravdess_ck.txt'
+    # batchsize_train= 48
+    # root_eval = './data/face/all_ravdess_glass'
+    # list_eval = './data/txt/all_ravdess_ck.txt'
+    # batchsize_eval= 64
+    # train_loader, val_loader = load.rav_faces_fan(root_train, list_train, batchsize_train, root_eval, list_eval, batchsize_eval)
     ''' Load model '''
     _structure = networks.resnet18_at(at_type=at_type)
     _parameterDir = './model/fold10model/fold10-3self_relation-attention_1_90.9091'
@@ -144,6 +154,7 @@ def val(val_loader, model, at_type, logger):
     output_alpha    = []
     target_store = []
     index_vector = []
+    torch.cuda.empty_cache()
     with torch.no_grad():
         for i, (input_var, target, index) in enumerate(val_loader):
             # compute output
