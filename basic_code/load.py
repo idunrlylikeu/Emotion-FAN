@@ -5,20 +5,20 @@ import torch.utils.data
 import torchvision.transforms as transforms
 from basic_code import data_generator
 
-cate2label = {'CK+':{0: 'Happy', 1: 'Angry', 2: 'Disgust', 3: 'Fear', 4: 'Sad', 5: 'Contempt', 6: 'Surprise',
-                     'Angry': 1,'Disgust': 2,'Fear': 3,'Happy': 0,'Contempt': 5,'Sad': 4,'Surprise': 6},
+cate2label = {'CK+':{0: 'Happy', 1: 'Angry', 2: 'Disgust', 3: 'Fear', 4: 'Sad', 6: 'Contempt', 5: 'Surprise',
+                     'Angry': 1,'Disgust': 2,'Fear': 3,'Happy': 0,'Contempt': 6,'Sad': 4,'Surprise': 5},
 
               'AFEW':{0: 'Happy',1: 'Angry',2: 'Disgust',3: 'Fear',4: 'Sad',5: 'Neutral',6: 'Surprise',
                   'Angry': 1,'Disgust': 2,'Fear': 3,'Happy': 0,'Neutral': 5,'Sad': 4,'Surprise': 6},
                 #   for compare ck+
-                'RAVDESS':{0: 'happy',1: 'angry',2: 'disgust',3: 'fearful',4: 'sad',6: 'surprised',
-                    'happy': 0,'angry': 1,'disgust': 2,'fearful': 3,'sad': 4,'surprised': 6},
+                'RAVDESS':{0: 'happy',1: 'angry',2: 'disgust',3: 'fearful',4: 'sad',5: 'surprised',
+                    'happy': 0,'angry': 1,'disgust': 2,'fearful': 3,'sad': 4,'surprised': 5},
               #  for use ravdess model
             #   'RAVDESS':{0: 'neutral',1: 'calm',2: 'happy',3: 'sad',4: 'angry',5: 'fearful',6: 'disgust',7: 'surprised',
             #       'neutral': 0,'calm': 1,'happy': 2,'sad': 3,'angry': 4,'fearful': 5,'disgust': 6,'surprised': 7},
             # for compare ck+
-              'OULU':{0: 'Happy', 1: 'Angry', 2: 'Disgust', 3: 'Fear', 4: 'Sadness', 6: 'Surprise',
-                     'Angry': 1,'Disgust': 2,'Fear': 3,'Happy': 0,'Sadness': 4,'Surprise': 6},
+              'OULU':{0: 'Happy', 1: 'Angry', 2: 'Disgust', 3: 'Fear', 4: 'Sadness', 5: 'Surprise',
+                     'Angry': 1,'Disgust': 2,'Fear': 3,'Happy': 0,'Sadness': 4,'Surprise': 5},
             #  for use oulu model
             #    'OULU':{0: 'Angry', 1: 'Disgust', 2: 'Fear', 3: 'Happy', 4: 'Sadness', 5: 'Surprise',
             #           'Angry': 0, 'Disgust': 1, 'Fear': 2, 'Happy': 3,'Sadness': 4,'Surprise': 5}

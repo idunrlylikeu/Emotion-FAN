@@ -23,13 +23,14 @@ def main():
     at_type = ['self-attention', 'self_relation-attention'][args.at_type]
     logger = util.Logger('./log/','fan_rav')
     logger.print('The attention method is {:}, learning rate: {:}'.format(at_type, args.lr))
+    logger2 = util.Logger('./log/','ravdess_loss_fan_train_75_25')
     
     ''' Load data '''
     root_train = './data/face/train_ravdess'
-    list_train = './data/txt/train_ravdess.txt'
+    list_train = './data/txt/train_ravdess_ck.txt'
     batchsize_train= 48
     root_eval = './data/face/test_ravdess'
-    list_eval = './data/txt/test_ravdess.txt'
+    list_eval = './data/txt/test_ravdess_ck.txt'
     batchsize_eval= 64
     train_loader, val_loader = load.rav_faces_fan(root_train, list_train, batchsize_train, root_eval, list_eval, batchsize_eval)
     ''' Load model '''
@@ -48,8 +49,8 @@ def main():
     logger.print('frame attention network (fan) rav dataset, learning rate: {:}'.format(args.lr))
 
     for epoch in range(args.epochs):
-        train(train_loader, model, optimizer, epoch, logger)
-        acc_epoch = val(val_loader, model, at_type, logger)
+        train(train_loader, model, optimizer, epoch, logger, logger2)
+        acc_epoch = val(val_loader, model, at_type, logger, logger2)
         is_best = acc_epoch > best_acc
         if is_best:
             logger.print('better model!')
@@ -66,7 +67,7 @@ def main():
     
     
         
-def train(train_loader, model, optimizer, epoch, logger):
+def train(train_loader, model, optimizer, epoch, logger, logger2):
     losses = util.AverageMeter()
     topframe = util.AverageMeter()
     topVideo = util.AverageMeter()
@@ -97,7 +98,7 @@ def train(train_loader, model, optimizer, epoch, logger):
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
-
+        torch.cuda.empty_cache()
         if i % 200 == 0:
             logger.print('Epoch: [{:3d}][{:3d}/{:3d}]\t'
                   'Loss {loss.val:.4f} ({loss.avg:.4f})\t'
@@ -110,7 +111,7 @@ def train(train_loader, model, optimizer, epoch, logger):
     index_matrix = []
     for i in range(int(max(index_vector)) + 1):
         index_matrix.append(index_vector == i)
-
+    logger2.print('Epoch: {:3d}\ntrain loss : {losses}'.format(epoch,losses=losses))
     index_matrix = torch.stack(index_matrix, dim=0).to(DEVICE).float()  # [21570]  --->  [380, 21570]
     output_store_fc = torch.cat(output_store_fc, dim=0)  # [256,7] ... [256,7]  --->  [21570, 7]
     target_store = torch.cat(target_store, dim=0).float()  # [256] ... [256]  --->  [21570]
@@ -121,9 +122,11 @@ def train(train_loader, model, optimizer, epoch, logger):
     acc_video = util.accuracy(pred_matrix_fc.cpu(), target_vector.cpu(), topk=(1,))
     topVideo.update(acc_video[0], i + 1)
     logger.print(' *Acc@Video {topVideo.avg:.3f}   *Acc@Frame {topframe.avg:.3f} '.format(topVideo=topVideo, topframe=topframe))
+    torch.cuda.empty_cache()
 
-def val(val_loader, model, at_type, logger):
+def val(val_loader, model, at_type, logger, logger2=None):
     topVideo = util.AverageMeter()
+    losses = util.AverageMeter()
     # switch to evaluate mode
     model.eval()
     output_store_fc = []
@@ -131,9 +134,6 @@ def val(val_loader, model, at_type, logger):
     target_store = []
     index_vector = []
     with torch.no_grad():
-        num_classes = 8
-        class_metrics = {i: {'tp': 0, 'total': 0} for i in range(num_classes)}
-        class_metrics2 = {i: {'tp': 0, 'fp': 0, 'fn': 0} for i in range(num_classes)}
         for i, (input_var, target, index) in enumerate(val_loader):
             # compute output
             target = target.to(DEVICE)
@@ -145,7 +145,7 @@ def val(val_loader, model, at_type, logger):
             output_alpha.append(alphas)
             target_store.append(target)
             index_vector.append(index)
-
+        torch.cuda.empty_cache()
         index_vector = torch.cat(index_vector, dim=0)  # [256] ... [256]  --->  [21570]
         index_matrix = []
         for i in range(int(max(index_vector)) + 1):
@@ -165,36 +165,16 @@ def val(val_loader, model, at_type, logger):
             pred_score = model(vm=weightmean_sourcefc, phrase='eval', AT_level='pred')
         if at_type == 'self_relation-attention':
             pred_score  = model(vectors=output_store_fc, vm=weightmean_sourcefc, alphas_from1=output_alpha, index_matrix=index_matrix, phrase='eval', AT_level='second_level')
-        pred = pred_score.argmax(dim=1)
-
-
-        # Compute the accuracy for each class
-        for i in range(num_classes):
-            tp = class_metrics[i]['tp']
-            total = class_metrics[i]['total']
-            accuracy_c = tp / total if total > 0 else 0
-            logger.print(f'Class {i}: Accuracy: {accuracy_c:.3f}')
-        # Update the class metrics
-        pred = pred_score.argmax(dim=1)
-        for i in range(num_classes):
-            class_metrics2[i]['tp'] += ((pred == i) & (target_vector == i)).sum().item()
-            class_metrics2[i]['fp'] += ((pred == i) & (target_vector != i)).sum().item()
-            class_metrics2[i]['fn'] += ((pred != i) & (target_vector == i)).sum().item()
-
-        # Compute the precision, recall, and F1 score for each class
-        for i in range(num_classes):
-            tp = class_metrics2[i]['tp']
-            fp = class_metrics2[i]['fp']
-            fn = class_metrics2[i]['fn']
-            precision = tp / (tp + fp) if tp + fp > 0 else 0
-            recall = tp / (tp + fn) if tp + fn > 0 else 0
-            f1 = 2 * precision * recall / (precision + recall) if precision + recall > 0 else 0
-            logger.print(f'Class {i}: Precision: {precision:.3f}, Recall: {recall:.3f}, F1: {f1:.3f}')
+        if logger2 is not None:
+            loss = F.cross_entropy(pred_score, target_vector)
+            losses.update(loss.item(), target_vector.size(0))
+            logger2.print('val loss :{losses}'.format(losses=losses))
             
             
         acc_video = util.accuracy(pred_score.cpu(), target_vector.cpu(), topk=(1,))
         topVideo.update(acc_video[0], i + 1)
         logger.print(' *Acc@Video {topVideo.avg:.3f} '.format(topVideo=topVideo))
+        torch.cuda.empty_cache()
         return topVideo.avg
 if __name__ == '__main__':
     main()
