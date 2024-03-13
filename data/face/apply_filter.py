@@ -150,8 +150,8 @@ def load_filter(filter_name="dog"):
 
 
 # process input from directories
-src_dir = "./ck_face/"
-dest_dir = "./ck_face_glass/"
+src_dir = "./all_oulu/"
+dest_dir = "./all_oulu_glass/"
 
 # Some variables
 count = 0

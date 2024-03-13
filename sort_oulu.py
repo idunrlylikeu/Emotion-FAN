@@ -2,7 +2,7 @@ import os
 import shutil
 
 # Define your source and destination directories
-source_dir = './data/video/train_oulu'
+source_dir = './data/video/train_oulu/'
 dest_dir = './data/video/train_oulu/'
 dir_name = {"A":"Angry","D":"Disgust","F":"Fear","H":"Happy","S1":"Surprise","S2":"Sadness"}
 # Get list of all files in source directory
