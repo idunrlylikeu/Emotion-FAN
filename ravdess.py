@@ -105,7 +105,6 @@ def train(train_loader, model, optimizer, epoch, logger, logger2):
                   'Acc@1 {topframe.val:.3f} ({topframe.avg:.3f})\t'
                 .format(
                 epoch, i, len(train_loader), loss=losses, topframe=topframe))
-    losses_per_epoch.append(losses.avg)
 
     index_vector = torch.cat(index_vector, dim=0)  # [256] ... [256]  --->  [21570]
     index_matrix = []
