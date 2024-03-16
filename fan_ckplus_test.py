@@ -23,16 +23,16 @@ def main():
     args = parser.parse_args()
     best_acc = 0
     at_type = ['self-attention', 'self_relation-attention'][args.at_type]
-    logger = util.Logger('./log/','evalrav_glass4-1_train_fan_ckplus')
+    logger = util.Logger('./log/','evaloulu4-1_alldata_train_fan_ckplus')
     logger.print('The attention method is {:}, learning rate: {:}'.format(at_type, args.lr))
     ''' Load data '''
-    # root_train = './data/face/ck_face'
-    # list_train = './data/txt/all_ck_nocontemp.txt'
-    # batchsize_train= 48
-    # root_eval = './data/face/all_oulu_glass'
-    # list_eval = './data/txt/all_oulu_glass.txt'
-    # batchsize_eval= 64
-    # train_loader, val_loader = load.oulu_faces_fan_ck(root_train, list_train, batchsize_train, root_eval, list_eval, batchsize_eval)
+    root_train = './data/face/ck_face'
+    list_train = './data/txt/all_ck_nocontemp.txt'
+    batchsize_train= 48
+    root_eval = './data/face/all_oulu'
+    list_eval = './data/txt/all_oulu.txt'
+    batchsize_eval= 64
+    train_loader, val_loader = load.oulu_faces_fan_ck(root_train, list_train, batchsize_train, root_eval, list_eval, batchsize_eval)
 
     # video_root = './data/face/ck_face_glass'
     # video_list = './data/txt/CK+_10-fold_sample_IDascendorder_step10.txt'
@@ -40,13 +40,13 @@ def main():
     # batchsize_eval= 64
     # train_loader, val_loader = load.ckplus_faces_fan(video_root, video_list, args.fold, batchsize_train, batchsize_eval)
 
-    root_train = './data/face/all_ravdess'
-    list_train = './data/txt/all_ravdess_ck.txt'
-    batchsize_train= 48
-    root_eval = './data/face/all_ravdess_glass'
-    list_eval = './data/txt/all_ravdess_ck.txt'
-    batchsize_eval= 64
-    train_loader, val_loader = load.rav_faces_fan(root_train, list_train, batchsize_train, root_eval, list_eval, batchsize_eval)
+    # root_train = './data/face/all_ravdess'
+    # list_train = './data/txt/all_ravdess_ck.txt'
+    # batchsize_train= 48
+    # root_eval = './data/face/all_ravdess_glass'
+    # list_eval = './data/txt/all_ravdess_ck.txt'
+    # batchsize_eval= 64
+    # train_loader, val_loader = load.rav_faces_fan(root_train, list_train, batchsize_train, root_eval, list_eval, batchsize_eval)
 
     # root_train = './data/face/train_ravdess'
     # list_train = './data/txt/train_ravdess_ck.txt'
