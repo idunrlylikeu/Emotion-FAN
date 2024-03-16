@@ -97,15 +97,13 @@ def train(train_loader, model, optimizer, epoch, logger, logger2):
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
-
+        torch.cuda.empty_cache()
         if i % 200 == 0:
             logger.print('Epoch: [{:3d}][{:3d}/{:3d}]\t'
                   'Loss {loss.val:.4f} ({loss.avg:.4f})\t'
                   'Acc@1 {topframe.val:.3f} ({topframe.avg:.3f})\t'
                 .format(
                 epoch, i, len(train_loader), loss=losses, topframe=topframe))
-        torch.cuda.empty_cache()
-    losses_per_epoch.append(losses.avg)
 
     index_vector = torch.cat(index_vector, dim=0)  # [256] ... [256]  --->  [21570]
     index_matrix = []
@@ -122,8 +120,9 @@ def train(train_loader, model, optimizer, epoch, logger, logger2):
     acc_video = util.accuracy(pred_matrix_fc.cpu(), target_vector.cpu(), topk=(1,))
     topVideo.update(acc_video[0], i + 1)
     logger.print(' *Acc@Video {topVideo.avg:.3f}   *Acc@Frame {topframe.avg:.3f} '.format(topVideo=topVideo, topframe=topframe))
+    torch.cuda.empty_cache()
 
-def val(val_loader, model, at_type, logger, logger2):
+def val(val_loader, model, at_type, logger, logger2=None):
     topVideo = util.AverageMeter()
     losses = util.AverageMeter()
     # switch to evaluate mode
@@ -169,11 +168,11 @@ def val(val_loader, model, at_type, logger, logger2):
             losses.update(loss.item(), target_vector.size(0))
             logger2.print('val loss :{losses}'.format(losses=losses))
             
+            
         acc_video = util.accuracy(pred_score.cpu(), target_vector.cpu(), topk=(1,))
         topVideo.update(acc_video[0], i + 1)
         logger.print(' *Acc@Video {topVideo.avg:.3f} '.format(topVideo=topVideo))
         torch.cuda.empty_cache()
-
         return topVideo.avg
 if __name__ == '__main__':
     main()

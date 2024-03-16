@@ -5,9 +5,11 @@ import torch.utils.data
 import torchvision.transforms as transforms
 from basic_code import data_generator
 
-cate2label = {'CK+':{0: 'Happy', 1: 'Angry', 2: 'Disgust', 3: 'Fear', 4: 'Sad', 6: 'Contempt', 5: 'Surprise',
+cate2label = {
+                'CK+':{0: 'Happy', 1: 'Angry', 2: 'Disgust', 3: 'Fear', 4: 'Sad', 6: 'Contempt', 5: 'Surprise',
                      'Angry': 1,'Disgust': 2,'Fear': 3,'Happy': 0,'Contempt': 6,'Sad': 4,'Surprise': 5},
-
+                # 'CK+':{0: 'Happy', 1: 'Angry', 2: 'Disgust', 3: 'Fear', 4: 'Sad', 5: 'Contempt', 6: 'Surprise',
+                #      'Angry': 1,'Disgust': 2,'Fear': 3,'Happy': 0,'Contempt': 5,'Sad': 4,'Surprise': 6},
               'AFEW':{0: 'Happy',1: 'Angry',2: 'Disgust',3: 'Fear',4: 'Sad',5: 'Neutral',6: 'Surprise',
                   'Angry': 1,'Disgust': 2,'Fear': 3,'Happy': 0,'Neutral': 5,'Sad': 4,'Surprise': 6},
                 #   for compare ck+
@@ -18,7 +20,7 @@ cate2label = {'CK+':{0: 'Happy', 1: 'Angry', 2: 'Disgust', 3: 'Fear', 4: 'Sad', 
             #       'neutral': 0,'calm': 1,'happy': 2,'sad': 3,'angry': 4,'fearful': 5,'disgust': 6,'surprised': 7},
             # for compare ck+
               'OULU':{0: 'Happy', 1: 'Angry', 2: 'Disgust', 3: 'Fear', 4: 'Sadness', 5: 'Surprise',
-                     'Angry': 1,'Disgust': 2,'Fear': 3,'Happy': 0,'Sadness': 4,'Surprise': 5},
+                     'Happy': 0, 'Angry': 1,'Disgust': 2,'Fear': 3,'Sadness': 4,'Surprise': 5},
             #  for use oulu model
             #    'OULU':{0: 'Angry', 1: 'Disgust', 2: 'Fear', 3: 'Happy', 4: 'Sadness', 5: 'Surprise',
             #           'Angry': 0, 'Disgust': 1, 'Fear': 2, 'Happy': 3,'Sadness': 4,'Surprise': 5}
@@ -211,7 +213,7 @@ def oulu_faces_fan(root_train, list_train, batchsize_train, root_eval, list_eval
     return train_loader, val_loader
 def oulu_faces_fan_ck(root_train, list_train, batchsize_train, root_eval, list_eval, batchsize_eval):
 
-    train_dataset = data_generator.TripleImageDataset(
+    train_dataset = data_generator.VideoDataset(
         video_root=root_train,
         video_list=list_train,
         rectify_label=cate2label['CK+'],

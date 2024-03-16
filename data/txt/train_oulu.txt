@@ -126,7 +126,6 @@ Angry/VL_P063_S_A Angry
 Angry/VL_P063_W_A Angry
 Angry/VL_P064_D_A Angry
 Angry/VL_P064_S_A Angry
-Angry/VL_P064_W_A Angry
 Angry/VL_P066_D_A Angry
 Angry/VL_P066_S_A Angry
 Angry/VL_P066_W_A Angry
@@ -139,7 +138,6 @@ Angry/VL_P069_W_A Angry
 Angry/VL_P070_D_A Angry
 Angry/VL_P070_S_A Angry
 Angry/VL_P070_W_A Angry
-Angry/VL_P072_D_A Angry
 Angry/VL_P072_S_A Angry
 Angry/VL_P072_W_A Angry
 Angry/VL_P073_D_A Angry
@@ -309,7 +307,6 @@ Disgust/VL_P070_S_D Disgust
 Disgust/VL_P070_W_D Disgust
 Disgust/VL_P072_D_D Disgust
 Disgust/VL_P072_S_D Disgust
-Disgust/VL_P072_W_D Disgust
 Disgust/VL_P073_D_D Disgust
 Disgust/VL_P073_S_D Disgust
 Disgust/VL_P073_W_D Disgust
@@ -798,7 +795,6 @@ Sadness/VL_P063_S_S2 Sadness
 Sadness/VL_P063_W_S2 Sadness
 Sadness/VL_P064_D_S2 Sadness
 Sadness/VL_P064_S_S2 Sadness
-Sadness/VL_P064_W_S2 Sadness
 Sadness/VL_P066_D_S2 Sadness
 Sadness/VL_P066_S_S2 Sadness
 Sadness/VL_P066_W_S2 Sadness
@@ -823,7 +819,6 @@ Sadness/VL_P074_W_S2 Sadness
 Sadness/VL_P075_D_S2 Sadness
 Sadness/VL_P075_S_S2 Sadness
 Sadness/VL_P075_W_S2 Sadness
-Sadness/VL_P076_D_S2 Sadness
 Sadness/VL_P076_S_S2 Sadness
 Sadness/VL_P076_W_S2 Sadness
 Sadness/VL_P077_D_S2 Sadness
