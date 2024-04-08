@@ -1,0 +1,2 @@
+07-Apr-2024-10-03-44 --- args ---
+The attention method is self_relation-attention, learning rate: 0.1

@@ -12,7 +12,7 @@ def main():
                         help= '0 is self-attention; 1 is self + relation-attention')
     parser.add_argument('--epochs', default=60, type=int, metavar='N',
                         help='number of total epochs to run')
-    parser.add_argument('-f', '--fold', default=1, type=int, help='which fold used for ck+ test')
+    parser.add_argument('-f', '--fold', default=4, type=int, help='which fold used for ck+ test')
     parser.add_argument('--lr', '--learning-rate', default=1e-1, type=float,
                         metavar='LR', help='initial learning rate')
     parser.add_argument('-e', '--evaluate', default=False, dest='evaluate', action='store_true',
@@ -20,9 +20,9 @@ def main():
     args = parser.parse_args()
     best_acc = 0
     at_type = ['self-attention', 'self_relation-attention'][args.at_type]
-    logger = util.Logger('./log/','cktrain_fold1_forlossfan_ckplus')
+    logger = util.Logger('./log/','cktrain_fold4_forlossfan_ckplus')
     logger.print('The attention method is {:}, learning rate: {:}'.format(at_type, args.lr))
-    logger2 = util.Logger('./log/','cktrain_loss_fold1fan_ckplus')
+    logger2 = util.Logger('./log/','cktrain_loss_fold4fan_ckplus')
     ''' Load data '''
     video_root = './data/face/ck_face'
     video_list = './data/txt/CK+_10-fold_sample_IDascendorder_step10.txt'
